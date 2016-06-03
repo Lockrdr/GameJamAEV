@@ -14,6 +14,9 @@ public class PlayerCombat : MonoBehaviour {
         m_playerHealth -= amount;
         if(m_playerHealth <= 0)
         {
+            if (m_playerHealth < 0)
+                m_playerHealth = 0;
+
             m_playerState = PlayerState.Dead;
             Debug.Log("Jugador con menos de 0 de vida. Estado Dead");
         }
