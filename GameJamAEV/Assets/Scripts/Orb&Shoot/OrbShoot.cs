@@ -13,10 +13,11 @@ public class OrbShoot : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		//Button "Fire": ProjectSettings -> Input
+		if (Input.GetButtonDown ("Fire")) {
+			Instantiate (shoot, transform.position, Quaternion.identity);
+		}
 	}
 
-	void OnClick(){
-		Instantiate (shoot, transform.position, Quaternion.identity);
-	}
+
 }
