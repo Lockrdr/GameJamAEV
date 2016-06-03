@@ -7,7 +7,11 @@ public class Enemy : MonoBehaviour {
     public bool m_playerDetected = false;
 
     public float m_enemyHP = 50f;
-    
+
+    [Tooltip("Time before attacking the player again")]
+    public float m_attackingCooldown = 3f;
+
+    private float m_timeSinceLastAttack;
 
 	void Start () {
 	
@@ -20,14 +24,17 @@ public class Enemy : MonoBehaviour {
         {
             attackPlayer();
         }
+
+        m_timeSinceLastAttack -= Time.deltaTime;
 	}
 
     void attackPlayer()
     {
-        //if(m_cooldownBetwe)
-        //{
-
-        //}
+       if (m_timeSinceLastAttack < 0)
+        {
+            Debug.Log("Te ataco");
+            m_timeSinceLastAttack = m_attackingCooldown;
+        }
     }
 
     public void playerDetected()
