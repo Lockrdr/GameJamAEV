@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour {
     }
 
     public int m_WaveNumber = 1;
+    public float hpToBecomeAlive = 50f;
+
 
 	void Start () {
         if (m_instance == null)

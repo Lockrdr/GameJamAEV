@@ -10,7 +10,7 @@ public class PlayerCombat : MonoBehaviour {
     public void substractLife(float amount)
     {
         m_playerHealth -= amount;
-        if(m_playerHealth <= 0)
+        if (m_playerHealth <= GameManager.getInstance().hpToBecomeAlive)
         {
             if (m_playerHealth < 0)
                 m_playerHealth = 0;
@@ -34,7 +34,7 @@ public class PlayerCombat : MonoBehaviour {
 
             Debug.Log("Jugador revivido");
 
-        }else if(m_playerHealth > 0)
+        }else if(m_playerHealth > GameManager.getInstance().hpToBecomeAlive)
         {
             GameManager.getInstance().changePlayerState(GameStates.PlayerState.Alive);
 

@@ -340,18 +340,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5028886, guid: fea175bef40740d428cfeb9b5cbf6251, type: 2}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5028886, guid: fea175bef40740d428cfeb9b5cbf6251, type: 2}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11475228, guid: fea175bef40740d428cfeb9b5cbf6251, type: 2}
-      propertyPath: m_playerSpeed
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fea175bef40740d428cfeb9b5cbf6251, type: 2}
   m_IsPrefabParent: 0
@@ -607,7 +595,7 @@ BoxCollider2D:
 GameObject:
   m_PrefabParentObject: {fileID: 134844, guid: 20557b653073f3b4ba87c32129676a8f, type: 2}
   m_PrefabInternal: {fileID: 127506377}
---- !u!61 &2098820691
+--- !u!61 &2098820694
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
