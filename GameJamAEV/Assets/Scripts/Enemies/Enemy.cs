@@ -6,12 +6,19 @@ public class Enemy : MonoBehaviour {
 
     public bool m_playerDetected = false;
 
+    public GameObject projectile;
+
     public float m_enemyHP = 50f;
 
     [Tooltip("Time before attacking the player again")]
     public float m_attackingCooldown = 3f;
 
     protected float m_timeSinceLastAttack;
+
+
+    public float shootDamage = 5f;
+    public float shootSpeed = 3f;
+
 
     virtual public void receiveDamage(float damage)
     {
@@ -47,7 +54,10 @@ public class Enemy : MonoBehaviour {
     {
        if (m_timeSinceLastAttack < 0)
         {
-            Debug.Log("Te ataco");
+            //Debug.Log("Te ataco");
+            GameObject shootInstance = (GameObject)Instantiate(projectile, transform.position, Quaternion.identity);
+            shootInstance.GetComponent<EnemyProjectile>().setDamage(shootDamage);
+            shootInstance.GetComponent<EnemyProjectile>().setSpeed(shootSpeed);
             m_timeSinceLastAttack = m_attackingCooldown;
         }
     }
@@ -55,13 +65,13 @@ public class Enemy : MonoBehaviour {
     virtual public void playerDetected()
     {
         m_playerDetected = true;
-        Debug.Log("Te veo");
+        //Debug.Log("Te veo");
     }
 
     virtual public void playerLost()
     {
         m_playerDetected = false;
-        Debug.Log("No te veo");
+        //Debug.Log("No te veo");
 
     }
 

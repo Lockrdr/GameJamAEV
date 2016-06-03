@@ -340,6 +340,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11437812, guid: fea175bef40740d428cfeb9b5cbf6251, type: 2}
+      propertyPath: m_playerHealth
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fea175bef40740d428cfeb9b5cbf6251, type: 2}
   m_IsPrefabParent: 0
@@ -381,6 +385,10 @@ Prefab:
     - target: {fileID: 469564, guid: 319145ebf4a0d344790a8a90efa102f6, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400156, guid: 319145ebf4a0d344790a8a90efa102f6, type: 2}
+      propertyPath: amountOfLife
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 319145ebf4a0d344790a8a90efa102f6, type: 2}
@@ -523,6 +531,10 @@ Prefab:
     - target: {fileID: 496640, guid: 56c8c5272c16c9642af08de63dd7d5bc, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11459646, guid: 56c8c5272c16c9642af08de63dd7d5bc, type: 2}
+      propertyPath: amountOfLife
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 56c8c5272c16c9642af08de63dd7d5bc, type: 2}
