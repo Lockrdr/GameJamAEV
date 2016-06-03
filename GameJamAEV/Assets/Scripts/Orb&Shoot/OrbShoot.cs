@@ -3,6 +3,9 @@ using System.Collections;
 
 public class OrbShoot : MonoBehaviour {
 
+	public GameObject shoot;
+	private Vector3 angle;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -10,6 +13,10 @@ public class OrbShoot : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+
+	}
+
+	void OnClick(){
+		Instantiate (shoot, transform.position, Quaternion.identity);
 	}
 }

@@ -43,6 +43,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 428748}
   - 114: {fileID: 11467882}
+  - 114: {fileID: 11429784}
   m_Layer: 0
   m_Name: Orb
   m_TagString: Untagged
@@ -88,6 +89,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 428748}
   m_RootOrder: 0
+--- !u!114 &11429784
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2b34681c5b9f640855a02daa858aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shoot: {fileID: 186318, guid: 343c4b262b5528445b86454db9c4bb0b, type: 2}
 --- !u!114 &11437812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -197,6 +210,10 @@ Prefab:
       propertyPath: m_SortingLayerID
       value: 529714297
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shoot
+      value: 
+      objectReference: {fileID: 186318, guid: 343c4b262b5528445b86454db9c4bb0b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 176338}
