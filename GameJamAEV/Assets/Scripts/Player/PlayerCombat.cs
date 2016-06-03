@@ -5,8 +5,6 @@ public class PlayerCombat : MonoBehaviour {
 
     public float m_playerHealth = 0f;
 
-    public enum PlayerState { Alive = 0, Dead = 1, Resurrected = 2};
-    public PlayerState m_playerState = 0;
 
 
     public void substractLife(float amount)
@@ -17,7 +15,7 @@ public class PlayerCombat : MonoBehaviour {
             if (m_playerHealth < 0)
                 m_playerHealth = 0;
 
-            m_playerState = PlayerState.Dead;
+            GameManager.getInstance().changePlayerState(GameStates.PlayerState.Dead);
             Debug.Log("Jugador con menos de 0 de vida. Estado Dead");
 
         }
@@ -32,12 +30,14 @@ public class PlayerCombat : MonoBehaviour {
 
         if (m_playerHealth >= 100)
         {
-            m_playerState = PlayerState.Resurrected;
+            GameManager.getInstance().changePlayerState(GameStates.PlayerState.Resurrected);
+
             Debug.Log("Jugador revivido");
 
         }else if(m_playerHealth > 0)
         {
-            m_playerState = PlayerState.Alive;
+            GameManager.getInstance().changePlayerState(GameStates.PlayerState.Alive);
+
             Debug.Log("Jugador con mas de 0 de vida. Estado Alive");
         }
         GUIManager.getInstance().updateHP(m_playerHealth);

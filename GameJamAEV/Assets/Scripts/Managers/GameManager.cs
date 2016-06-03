@@ -10,6 +10,13 @@ public class GameManager : MonoBehaviour {
         return m_instance;
     }
 
+    //public enum PlayerState { Alive = 0, Dead = 1, Resurrected = 2 };
+    public GameStates.PlayerState m_playerState;
+
+    public void changePlayerState(GameStates.PlayerState state)
+    {
+        m_playerState = state;
+    }
 
     public int m_WaveNumber = 1;
 

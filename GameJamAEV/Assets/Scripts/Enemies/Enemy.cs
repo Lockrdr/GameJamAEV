@@ -15,12 +15,16 @@ public class Enemy : MonoBehaviour {
 
     virtual public void receiveDamage(float damage)
     {
-        m_enemyHP -= damage;
-             
-        if (m_enemyHP <= 0)
+        if(GameManager.getInstance().m_playerState == GameStates.PlayerState.Dead)
         {
-            die();
+            m_enemyHP -= damage;
+
+            if (m_enemyHP <= 0)
+            {
+                die();
+            }
         }
+        
     }
 
     virtual internal void die()
