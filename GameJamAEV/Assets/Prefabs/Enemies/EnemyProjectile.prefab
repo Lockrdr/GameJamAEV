@@ -27,7 +27,7 @@ GameObject:
   - 50: {fileID: 5079704}
   - 58: {fileID: 5855576}
   - 114: {fileID: 11438284}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EnemyProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 153618}

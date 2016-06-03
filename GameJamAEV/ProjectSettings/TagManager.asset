@@ -18,8 +18,8 @@ TagManager:
   - Player
   - Shoot
   - Wall
-  - 
-  - 
+  - EnemyShoot
+  - Enemy
   - 
   - 
   - 
