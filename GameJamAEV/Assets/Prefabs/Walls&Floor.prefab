@@ -27,7 +27,7 @@ GameObject:
   - 61: {fileID: 6112230}
   m_Layer: 0
   m_Name: WallDown
-  m_TagString: Enemy
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,7 +58,7 @@ GameObject:
   - 61: {fileID: 6185740}
   m_Layer: 0
   m_Name: WallLeft
-  m_TagString: Enemy
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +74,7 @@ GameObject:
   - 61: {fileID: 6137010}
   m_Layer: 0
   m_Name: WallRight
-  m_TagString: Enemy
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,7 +90,7 @@ GameObject:
   - 61: {fileID: 6176870}
   m_Layer: 0
   m_Name: WallUp
-  m_TagString: Enemy
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
