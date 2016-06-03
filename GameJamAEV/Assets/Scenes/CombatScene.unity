@@ -85,6 +85,52 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &139323325
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 425990, guid: 3b09aa9324427f8468d407f9b5780569, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 5.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 425990, guid: 3b09aa9324427f8468d407f9b5780569, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 425990, guid: 3b09aa9324427f8468d407f9b5780569, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425990, guid: 3b09aa9324427f8468d407f9b5780569, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425990, guid: 3b09aa9324427f8468d407f9b5780569, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425990, guid: 3b09aa9324427f8468d407f9b5780569, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425990, guid: 3b09aa9324427f8468d407f9b5780569, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 425990, guid: 3b09aa9324427f8468d407f9b5780569, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 22372782, guid: 3b09aa9324427f8468d407f9b5780569, type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1614825545}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3b09aa9324427f8468d407f9b5780569, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &562740475
 Prefab:
   m_ObjectHideFlags: 0
@@ -211,6 +257,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fea175bef40740d428cfeb9b5cbf6251, type: 2}
   m_IsPrefabParent: 0
+--- !u!20 &1614825545 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 2029408, guid: 4ff21977961b58a4cb74411a98686e68,
+    type: 2}
+  m_PrefabInternal: {fileID: 562740475}
 --- !u!1001 &1658585455
 Prefab:
   m_ObjectHideFlags: 0
