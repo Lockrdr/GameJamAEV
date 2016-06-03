@@ -55,6 +55,7 @@ public class PlayerCombat : MonoBehaviour {
         HalfBodyGO = gameObject.transform.Find("HalfBody").gameObject;
         FullBodyGO = gameObject.transform.Find("FullBody").gameObject;
         updateSprite();
+        GameManager.getInstance().checkState(m_playerHealth);
 
 	}
 	

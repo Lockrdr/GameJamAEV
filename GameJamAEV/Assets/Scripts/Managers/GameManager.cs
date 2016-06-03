@@ -9,6 +9,13 @@ public class GameManager : MonoBehaviour {
     {
         return m_instance;
     }
+    
+    public int m_WaveNumber = 1;
+    public float hpToBecomeAlive = 50f;
+
+    public float HpForFullBody = 50f;
+    public float HpForHalfBody = 25f;
+
 
     //public enum PlayerState { Alive = 0, Dead = 1, Resurrected = 2 };
     public GameStates.PlayerState m_playerState;
@@ -18,12 +25,16 @@ public class GameManager : MonoBehaviour {
         m_playerState = state;
     }
 
-    public int m_WaveNumber = 1;
-    public float hpToBecomeAlive = 50f;
-
-    public float HpForFullBody = 50f;
-    public float HpForHalfBody = 25f;
-
+    public void checkState(float playerHp)
+    {
+        if (playerHp <= hpToBecomeAlive)
+           changePlayerState(GameStates.PlayerState.Dead);
+        else if (playerHp >= 100)        
+           changePlayerState(GameStates.PlayerState.Resurrected);
+        else if(playerHp > GameManager.getInstance().hpToBecomeAlive)
+           changePlayerState(GameStates.PlayerState.Alive);         
+        
+    }
 
 
 	void Start () {
