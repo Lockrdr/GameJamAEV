@@ -29,7 +29,7 @@ GameObject:
   - 114: {fileID: 11437812}
   - 61: {fileID: 6121352}
   - 50: {fileID: 5028886}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ Transform:
   m_GameObject: {fileID: 176338}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children:
   - {fileID: 428748}
   m_Father: {fileID: 0}
@@ -119,9 +119,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.010725886, y: 0.016088843}
   serializedVersion: 2
-  m_Size: {x: 2.15, y: 1.64}
+  m_Size: {x: 0.7341779, y: 1.0929774}
 --- !u!114 &11429784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 1.75
-  rotationRadius: 1.5
+  rotationRadius: 0.75
 --- !u!114 &11475228
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be5e7ef33e779fa4d924ad765e5ccb9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_playerSpeed: 5
+  m_playerSpeed: 4
 --- !u!212 &21211930
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -198,8 +198,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 529714297
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5e2b91a395b5c3b49b48f2d4145b67db, type: 3}
-  m_Color: {r: 0.5808823, g: 0.068339095, b: 0.068339095, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 2c44cf67207f8bc4d8e3f86289080198, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!212 &21231670
@@ -226,7 +226,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 529714297
+  m_SortingLayerID: 383703575
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5e2b91a395b5c3b49b48f2d4145b67db, type: 3}
   m_Color: {r: 0, g: 0.9843138, b: 0, a: 1}
@@ -247,6 +247,10 @@ Prefab:
       propertyPath: shoot
       value: 
       objectReference: {fileID: 186318, guid: 343c4b262b5528445b86454db9c4bb0b, type: 2}
+    - target: {fileID: 0}
+      propertyPath: rotationRadius
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 176338}

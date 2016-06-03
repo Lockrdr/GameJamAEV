@@ -14,8 +14,9 @@ public class ShootMoment : MonoBehaviour {
 		shootDirection = Input.mousePosition;
 		shootDirection.z = 0.0f;
 		shootDirection = Camera.main.ScreenToWorldPoint (shootDirection);
-		shootDirection = shootDirection - transform.position;
-		rb.AddForce (shootDirection.normalized*1000*shootSpeed);
+		shootDirection = Vector3.Normalize(shootDirection - transform.position);
+
+		rb.AddForce (shootDirection*1000*shootSpeed);
 	}
 
 }
