@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Suelo
+    uniqueID: 3112723805
+    locked: 0
+  - name: Player
+    uniqueID: 529714297
+    locked: 0
+  - name: Enemies
+    uniqueID: 1395422913
+    locked: 0
