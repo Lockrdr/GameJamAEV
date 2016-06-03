@@ -5,8 +5,8 @@ public class ShootMoment : MonoBehaviour {
 
 	private Rigidbody2D rb;
 	private Vector3 shootDirection;
-    public float shootSpeed = 1f;
-    public float shootDamage = 5f;
+    private float shootSpeed = 1f;
+    private float shootDamage = 5f;
 
 	// Use this for initialization
 	void Start () {
@@ -36,4 +36,13 @@ public class ShootMoment : MonoBehaviour {
 
     }
 
+    public void setDamage(float damage)
+    {
+        shootDamage = damage;
+    }
+    public void setSpeed(float speed)
+    {
+        shootSpeed = speed;
+    }
+    
 }

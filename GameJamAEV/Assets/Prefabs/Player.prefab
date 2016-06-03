@@ -75,8 +75,8 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_IsKinematic: 1
+  m_GravityScale: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -124,6 +124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shoot: {fileID: 186318, guid: 343c4b262b5528445b86454db9c4bb0b, type: 2}
+  shootDamage: 10
+  shootSpeed: 3
 --- !u!114 &11437812
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -5,6 +5,8 @@ public class OrbShoot : MonoBehaviour {
 
 	public GameObject shoot;
 	private Vector3 angle;
+    public float shootDamage = 5f;
+    public float shootSpeed = 3f;
 
 	// Use this for initialization
 	void Start () {
@@ -15,8 +17,10 @@ public class OrbShoot : MonoBehaviour {
 	void Update () {
 		//Button "Fire": ProjectSettings -> Input
 		if (Input.GetButtonDown ("Fire")) {
-			Instantiate (shoot, transform.position, Quaternion.identity);
-		}
+			GameObject shootInstance = (GameObject) Instantiate (shoot, transform.position, Quaternion.identity);
+            shootInstance.GetComponent<ShootMoment>().setDamage(shootDamage);
+            shootInstance.GetComponent<ShootMoment>().setSpeed(shootSpeed);
+        }
 	}
 
 
