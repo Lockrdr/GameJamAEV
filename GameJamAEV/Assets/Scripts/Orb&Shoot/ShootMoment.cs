@@ -5,7 +5,8 @@ public class ShootMoment : MonoBehaviour {
 
 	private Rigidbody2D rb;
 	private Vector3 shootDirection;
-	public float shootSpeed = 1f;
+    public float shootSpeed = 1f;
+    public float shootDamage = 5f;
 
 	// Use this for initialization
 	void Start () {
@@ -18,5 +19,21 @@ public class ShootMoment : MonoBehaviour {
 
 		rb.AddForce (shootDirection*1000*shootSpeed);
 	}
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if(coll.gameObject.CompareTag("Enemy"))
+        {
+            coll.gameObject.GetComponent<Enemy>().receiveDamage(shootDamage);
+            //Debug.Log("Enemigo");
+        }
+        else if (coll.gameObject.CompareTag("Wall"))
+        {
+            //Debug.Log("Pared");
+        }
+
+        Destroy(gameObject);
+
+    }
 
 }
