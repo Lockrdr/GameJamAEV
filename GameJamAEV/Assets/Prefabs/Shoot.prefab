@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a9dacdea084eab49864e769cd97d9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootSpeed: 1
+  shootSpeed: 3
 --- !u!212 &21252444
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -170,6 +170,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shootSpeed
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
