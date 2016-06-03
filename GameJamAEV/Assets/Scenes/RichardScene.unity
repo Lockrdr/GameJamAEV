@@ -206,11 +206,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 415486, guid: fea175bef40740d428cfeb9b5cbf6251, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 21211930, guid: fea175bef40740d428cfeb9b5cbf6251, type: 2}
-      propertyPath: m_SortingLayerID
-      value: 529714297
+    - target: {fileID: 11437812, guid: fea175bef40740d428cfeb9b5cbf6251, type: 2}
+      propertyPath: m_playerState
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fea175bef40740d428cfeb9b5cbf6251, type: 2}
