@@ -41,14 +41,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 197984, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
+  - {fileID: 194464, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
+  - {fileID: 198898, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
+  - {fileID: 131452, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
+  - {fileID: 145572, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
+  - {fileID: 151448, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
+  - {fileID: 117194, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
+  - {fileID: 156366, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
+  enemies:
+  - {fileID: 101742, guid: fa9d16ebf3137384d9b402d541cbccc8, type: 2}
 --- !u!114 &11498834
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -63,13 +65,55 @@ MonoBehaviour:
   m_playerState: 0
   m_WaveNumber: 1
   hpToBecomeAlive: 50
+  hpToFullBody: 50
+  hpToHalfBody: 25
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: enemies.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: spawnPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 197984, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
+    - target: {fileID: 0}
+      propertyPath: spawnPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 194464, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
+    - target: {fileID: 0}
+      propertyPath: spawnPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 198898, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
+    - target: {fileID: 0}
+      propertyPath: spawnPoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 131452, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
+    - target: {fileID: 0}
+      propertyPath: spawnPoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 145572, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
+    - target: {fileID: 0}
+      propertyPath: spawnPoints.Array.data[5]
+      value: 
+      objectReference: {fileID: 151448, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
+    - target: {fileID: 0}
+      propertyPath: spawnPoints.Array.data[6]
+      value: 
+      objectReference: {fileID: 117194, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
+    - target: {fileID: 0}
+      propertyPath: spawnPoints.Array.data[7]
+      value: 
+      objectReference: {fileID: 156366, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
+    - target: {fileID: 0}
+      propertyPath: enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 101742, guid: fa9d16ebf3137384d9b402d541cbccc8, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 119360}
