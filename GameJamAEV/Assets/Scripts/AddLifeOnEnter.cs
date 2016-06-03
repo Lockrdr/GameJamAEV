@@ -7,6 +7,8 @@ public class AddLifeOnEnter : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D coll)
     {
+
+
         if(coll.CompareTag("Player"))
         {
             coll.GetComponent<PlayerCombat>().addLife(amountOfLife);
