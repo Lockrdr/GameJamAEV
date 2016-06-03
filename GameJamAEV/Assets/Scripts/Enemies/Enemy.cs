@@ -11,14 +11,25 @@ public class Enemy : MonoBehaviour {
     [Tooltip("Time before attacking the player again")]
     public float m_attackingCooldown = 3f;
 
-    private float m_timeSinceLastAttack;
+    protected float m_timeSinceLastAttack;
 
-	void Start () {
-	
-	}
-	
-	
-	void Update () {
+    virtual public void receiveDamage(float damage)
+    {
+        m_enemyHP -= damage;
+             
+        if (m_enemyHP <= 0)
+        {
+            die();
+        }
+    }
+
+    virtual internal void die()
+    {
+        Destroy(gameObject);
+    }
+
+    void Update()
+    {
 	
         if(m_playerDetected)
         {
@@ -28,7 +39,7 @@ public class Enemy : MonoBehaviour {
         m_timeSinceLastAttack -= Time.deltaTime;
 	}
 
-    void attackPlayer()
+    protected virtual void attackPlayer()
     {
        if (m_timeSinceLastAttack < 0)
         {
@@ -37,13 +48,13 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-    public void playerDetected()
+    virtual public void playerDetected()
     {
         m_playerDetected = true;
         Debug.Log("Te veo");
     }
 
-    public void playerLost()
+    virtual public void playerLost()
     {
         m_playerDetected = false;
         Debug.Log("No te veo");
