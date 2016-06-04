@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour {
 
 	public AudioSource audioSource;
 
-	public void Start(){
+	virtual public void Start(){
 		audioSource = gameObject.GetComponent<AudioSource> ();
 	}
 
