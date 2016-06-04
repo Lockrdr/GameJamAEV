@@ -24,13 +24,23 @@ public class EnemySpawner : MonoBehaviour {
 			positionsOcupated [i] = 0;
 		}
 		while(spawnedNumber < enemiesToSpawn){
-			spawnPosition = Random.Range (0,spawnPoints.Length-1);
-			Debug.Log (spawnPosition);
-			if (positionsOcupated [spawnPosition] != 1) {
-				spawnEnemy = Random.Range (0, enemies.Length - 1);
-				Instantiate (enemies [spawnEnemy], spawnPoints [spawnPosition].transform.position, Quaternion.identity);
-				positionsOcupated [spawnPosition] = 1;
-				spawnedNumber ++;
+
+			spawnEnemy = Random.Range (0, enemies.Length);
+
+			if (spawnEnemy == 0) {
+				spawnPosition = Random.Range (0, spawnPoints.Length);
+				if (positionsOcupated [spawnPosition] != 1) {
+					Instantiate (enemies [spawnEnemy], spawnPoints [spawnPosition].transform.position, Quaternion.identity);
+					positionsOcupated [spawnPosition] = 1;
+					spawnedNumber++;
+				}
+			} else if (spawnEnemy == 1) {
+				spawnPosition = Random.Range (8, 11); 
+				if (positionsOcupated [spawnPosition] != 1) {
+					Instantiate (enemies [spawnEnemy], spawnPoints [spawnPosition].transform.position, Quaternion.identity);
+					positionsOcupated [spawnPosition] = 1;
+					spawnedNumber++;
+				}
 			}
 		}
 	}
