@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 483180}
   - 114: {fileID: 11498834}
   - 114: {fileID: 11490738}
+  - 114: {fileID: 11491960}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -49,8 +50,26 @@ MonoBehaviour:
   - {fileID: 151448, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
   - {fileID: 117194, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
   - {fileID: 156366, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
+  - {fileID: 125126, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
+  - {fileID: 143576, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
+  - {fileID: 163446, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
+  - {fileID: 197984, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
   enemies:
   - {fileID: 101742, guid: fa9d16ebf3137384d9b402d541cbccc8, type: 2}
+  - {fileID: 149880, guid: 20557b653073f3b4ba87c32129676a8f, type: 2}
+--- !u!114 &11491960
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7917aad35cde514bb34c2786f2cfa70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints: []
+  enemies: []
 --- !u!114 &11498834
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -62,11 +81,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba8e3485398c7d48b2a26a52b833dd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_playerState: 0
   m_WaveNumber: 1
+  m_enemyNumberControler: 2
   hpToBecomeAlive: 50
-  hpToFullBody: 50
-  hpToHalfBody: 25
+  HpForFullBody: 50
+  HpForHalfBody: 25
+  m_playerState: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

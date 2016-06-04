@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour {
     }
     
     public int m_WaveNumber = 1;
+	public int m_enemyNumberControler = 2;
+
     public float hpToBecomeAlive = 50f;
 
     public float HpForFullBody = 50f;
@@ -38,10 +40,26 @@ public class GameManager : MonoBehaviour {
 
 
 	void Start () {
+		
         if (m_instance == null)
             m_instance = this;
 
 	}
-	
+
+	void Update(){
+
+		if (m_enemyNumberControler == 0) {
+			Debug.Log ("Acabada");
+			GetComponent<EnemySpawner>().spawnWave (1);
+			m_enemyNumberControler = 2;
+			m_WaveNumber++;
+			GUIManager.getInstance ().updateWaveNumber (m_WaveNumber);
+		}
+
+
+
+	}
+
+
 	
 }

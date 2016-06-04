@@ -36,7 +36,8 @@ public class Enemy : MonoBehaviour {
 
     virtual internal void die()
     {
-        Destroy(gameObject);
+		GameManager.getInstance ().m_enemyNumberControler--;
+		Destroy(gameObject);
     }
 
     void Update()

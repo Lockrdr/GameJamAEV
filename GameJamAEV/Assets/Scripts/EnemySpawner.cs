@@ -25,6 +25,7 @@ public class EnemySpawner : MonoBehaviour {
 		}
 		while(spawnedNumber < enemiesToSpawn){
 			spawnPosition = Random.Range (0,spawnPoints.Length-1);
+			Debug.Log (spawnPosition);
 			if (positionsOcupated [spawnPosition] != 1) {
 				spawnEnemy = Random.Range (0, enemies.Length - 1);
 				Instantiate (enemies [spawnEnemy], spawnPoints [spawnPosition].transform.position, Quaternion.identity);
