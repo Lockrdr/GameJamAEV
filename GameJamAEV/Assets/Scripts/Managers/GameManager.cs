@@ -96,6 +96,7 @@ public class GameManager : MonoBehaviour {
         {
             Debug.Log("Acabada");
             watingNextWave = true;
+            GUIManager.getInstance().activeNexWaveText();
             StartCoroutine(delayNextWave(timeBetweenWaves));
 			
 		}
@@ -111,6 +112,8 @@ public class GameManager : MonoBehaviour {
         audioSource.Play();
         GUIManager.getInstance().updateWaveNumber(m_WaveNumber);
         watingNextWave = false;
+        GUIManager.getInstance().deactiveNexWaveText();
+
     }
 
 	void endGame()
