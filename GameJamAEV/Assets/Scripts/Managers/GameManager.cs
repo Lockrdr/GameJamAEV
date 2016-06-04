@@ -14,12 +14,19 @@ public class GameManager : MonoBehaviour {
     private GameObject playerOrb;
     
     public int m_WaveNumber = 1;
-	public int m_enemyNumberControler = 8;
+    public float timeBetweenWaves = 3f;
+	
+    public int m_enemyNumberControler = 8;
+    private bool watingNextWave = false;
 
     public float hpToBecomeAlive = 50f;
 
     public float HpForFullBody = 50f;
     public float HpForHalfBody = 25f;
+
+
+
+
 
 	public AudioSource audioSource;
 
@@ -81,21 +88,36 @@ public class GameManager : MonoBehaviour {
 
 	}
 
+
+
 	void Update(){
 
-		if (m_enemyNumberControler == 0) {
-			Debug.Log ("Acabada");
-			m_WaveNumber++;
-			GetComponent<EnemySpawner>().spawnWave (m_WaveNumber);
-			audioSource.clip = SoundManager.getInstance ().startWave ();
-			audioSource.Play ();
-			GUIManager.getInstance ().updateWaveNumber (m_WaveNumber);
+        if (m_enemyNumberControler == 0 && !watingNextWave)
+        {
+            Debug.Log("Acabada");
+            watingNextWave = true;
+            StartCoroutine(delayNextWave(timeBetweenWaves));
+			
 		}
 	}
+
+
+    IEnumerator delayNextWave(float inXSeconds)
+    {
+        yield return new WaitForSeconds(inXSeconds);
+        m_WaveNumber++;
+        GetComponent<EnemySpawner>().spawnWave(m_WaveNumber);
+        audioSource.clip = SoundManager.getInstance().startWave();
+        audioSource.Play();
+        GUIManager.getInstance().updateWaveNumber(m_WaveNumber);
+        watingNextWave = false;
+    }
 
 	void endGame()
     {
         Time.timeScale = 0;
         GUIManager.getInstance().getEndScreen().SetActive(true);
     }
+
+
 }
