@@ -9,6 +9,19 @@ public class PlayerCombat : MonoBehaviour {
     private GameObject HalfBodyGO;
     private GameObject FullBodyGO;
 
+
+    void Start()
+    {
+
+        GUIManager.getInstance().updateHP(m_playerHealth);
+        NoBodyGO = gameObject.transform.Find("NoBody").gameObject;
+        HalfBodyGO = gameObject.transform.Find("HalfBody").gameObject;
+        FullBodyGO = gameObject.transform.Find("FullBody").gameObject;
+        updateSprite();
+        GameManager.getInstance().checkState(m_playerHealth);
+
+    }
+
     public void substractLife(float amount)
     {
         m_playerHealth -= amount;
@@ -18,7 +31,7 @@ public class PlayerCombat : MonoBehaviour {
                 m_playerHealth = 0;
 
             GameManager.getInstance().changePlayerState(GameStates.PlayerState.Dead);
-            Debug.Log("Jugador con menos de 0 de vida. Estado Dead");
+            //Debug.Log("Jugador con menos de 0 de vida. Estado Dead");
 
         }
         GUIManager.getInstance().updateHP(m_playerHealth);
@@ -26,6 +39,7 @@ public class PlayerCombat : MonoBehaviour {
 
     }
 
+  
 
     public void addLife(float amount)
     {
@@ -41,23 +55,14 @@ public class PlayerCombat : MonoBehaviour {
         {
             GameManager.getInstance().changePlayerState(GameStates.PlayerState.Alive);
 
-            Debug.Log("Jugador con mas de 0 de vida. Estado Alive");
+            //Debug.Log("Jugador con mas de 0 de vida. Estado Alive");
         }
         GUIManager.getInstance().updateHP(m_playerHealth);
         updateSprite();
         
     }
     
-	void Start () {
-
-        GUIManager.getInstance().updateHP(m_playerHealth);
-        NoBodyGO = gameObject.transform.Find("NoBody").gameObject;
-        HalfBodyGO = gameObject.transform.Find("HalfBody").gameObject;
-        FullBodyGO = gameObject.transform.Find("FullBody").gameObject;
-        updateSprite();
-        GameManager.getInstance().checkState(m_playerHealth);
-
-	}
+	
 	
     
     void updateSprite()

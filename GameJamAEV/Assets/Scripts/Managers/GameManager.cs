@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour {
     public void changePlayerState(GameStates.PlayerState state)
     {
         m_playerState = state;
+
+
     }
 
     public void checkState(float playerHp)
@@ -43,6 +45,7 @@ public class GameManager : MonoBehaviour {
 		
         if (m_instance == null)
             m_instance = this;
+
 
 	}
 

@@ -212,6 +212,7 @@ MonoBehaviour:
   shoot: {fileID: 186318, guid: 343c4b262b5528445b86454db9c4bb0b, type: 2}
   shootDamage: 5
   shootSpeed: 3
+  m_attackingCooldown: 0.5
 --- !u!114 &11437812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -223,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 570aaea213e8c6e4e94f13430278560b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_playerHealth: 50
+  m_playerHealth: 51
 --- !u!114 &11467882
 MonoBehaviour:
   m_ObjectHideFlags: 1
