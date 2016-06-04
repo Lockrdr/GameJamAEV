@@ -25,6 +25,10 @@ public class GUIManager : MonoBehaviour {
     private PlayerMovement m_playerMovement;
     private PlayerCombat m_playerCombat;
 
+    private Button botonPlayAgain;
+    private Button botonMainMenu;
+
+    //private GameObject endScreen;
 
 
     //private bool paused = false;
@@ -33,6 +37,7 @@ public class GUIManager : MonoBehaviour {
     {
         m_lifeNumber = transform.Find("UI/Life/LifeNumber").GetComponent<Text>();
         m_waveNumber = transform.Find("UI/Wave/WaveNumber").GetComponent<Text>();
+
     }
 
     void Start()
@@ -41,7 +46,27 @@ public class GUIManager : MonoBehaviour {
             m_instance = this;
 
         updateWaveNumber(GameManager.getInstance().m_WaveNumber);
+
+        //endScreen = transform.Find("EndScreen").gameObject;
+
+        m_lifeNumber = transform.Find("UI/Life/LifeNumber").GetComponent<Text>();
+        botonPlayAgain = transform.Find("EndScreen/PlayAgainButton").GetComponent<Button>();
+        botonMainMenu = transform.Find("EndScreen/BackToMenuButton").GetComponent<Button>();
+        setButtonAutomatically();
     }
+
+    void setButtonAutomatically()
+    {
+        botonPlayAgain.onClick.RemoveAllListeners();
+        botonPlayAgain.onClick.SetPersistentListenerState(0, UnityEngine.Events.UnityEventCallState.Off);
+        botonPlayAgain.onClick.AddListener(() =>playAgain());
+
+        botonMainMenu.onClick.RemoveAllListeners();
+        botonMainMenu.onClick.SetPersistentListenerState(0, UnityEngine.Events.UnityEventCallState.Off);
+        botonMainMenu.onClick.AddListener(() => MainMenu());
+
+    }
+     
 
     public void updateWaveNumber(int wave)
     {
@@ -70,4 +95,20 @@ public class GUIManager : MonoBehaviour {
 
         //}
     }        
+    void playAgain()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MenuScene");
+
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
 }
