@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour {
 
     public float hpEndGame = 125f;
 
+	public float timeToSpawn = 30f;
+	public float lastSpawnTime;
 
     public Texture2D newCursor;
     private GameObject WallFloors;
@@ -95,15 +97,18 @@ public class GameManager : MonoBehaviour {
 
         StartCoroutine(delayFirstWave(timeBetweenWaves));
 
+		lastSpawnTime = Time.time;
+
 	}
 
 
 
 	void Update(){
 
-        if (m_enemyNumberControler == 0 && !watingNextWave)
+		if ((m_enemyNumberControler == 0 || Time.time - lastSpawnTime >= 30 ) && !watingNextWave)
         {
             watingNextWave = true;
+			lastSpawnTime = Time.time + timeBetweenWaves;
             GUIManager.getInstance().activeNexWaveText();
             StartCoroutine(delayNextWave(timeBetweenWaves));
 		}

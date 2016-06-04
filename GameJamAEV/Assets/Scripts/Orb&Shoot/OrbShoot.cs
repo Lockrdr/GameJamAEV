@@ -12,7 +12,7 @@ public class OrbShoot : MonoBehaviour {
 
 
     [Tooltip("Time before attacking the player again")]
-    public float m_attackingCooldown = 3f;
+    public float m_attackingCooldown = 0.33f;
 
     protected float m_timeSinceLastAttack;
 
@@ -33,6 +33,7 @@ public class OrbShoot : MonoBehaviour {
             shootInstance.GetComponent<ShootMoment>().setDamage(shootDamage);
             shootInstance.GetComponent<ShootMoment>().setSpeed(shootSpeed);
         }
+
         m_timeSinceLastAttack -= Time.deltaTime;
 
 	}

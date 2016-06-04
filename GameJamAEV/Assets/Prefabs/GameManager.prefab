@@ -132,6 +132,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 101742, guid: fa9d16ebf3137384d9b402d541cbccc8, type: 2}
   - {fileID: 149880, guid: 20557b653073f3b4ba87c32129676a8f, type: 2}
+  - {fileID: 123002, guid: 7cc9b623e0d856742ba6a90b96c39563, type: 2}
   indicatorImage: {fileID: 140070, guid: 457a3e5ec11a7cd4ba666fef20181aa0, type: 2}
   waitEnemies: 1
 --- !u!114 &11495642
@@ -165,9 +166,14 @@ MonoBehaviour:
   m_WaveNumber: 1
   timeBetweenWaves: 3
   m_enemyNumberControler: 2
-  hpToBecomeAlive: 75
-  HpForFullBody: 80
+  hpToBecomeAlive: 70
+  HpForFullBody: 100
+  HpForThreeQuarterBody: 75
   HpForHalfBody: 50
+  HpForQuarterBody: 25
+  hpEndGame: 125
+  timeToSpawn: 30
+  lastSpawnTime: 0
   newCursor: {fileID: 2800000, guid: 0d012d4b63a852c439d2acb1f24435c4, type: 3}
   audioSource: {fileID: 0}
   m_playerState: 0
