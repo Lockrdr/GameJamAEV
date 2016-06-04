@@ -84,7 +84,7 @@ public class GameManager : MonoBehaviour {
         if (m_instance == null)
             m_instance = this;
 
-		GetComponent<EnemySpawner>().spawnWave (m_WaveNumber);
+        StartCoroutine(delayFirstWave(timeBetweenWaves));
 
 	}
 
@@ -102,7 +102,12 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
-
+    IEnumerator delayFirstWave(float inXSeconds)
+    {
+        yield return new WaitForSeconds(inXSeconds);
+        GetComponent<EnemySpawner>().spawnWave(m_WaveNumber);
+        GUIManager.getInstance().deactiveGetReadyText();
+    }
     IEnumerator delayNextWave(float inXSeconds)
     {
         yield return new WaitForSeconds(inXSeconds);

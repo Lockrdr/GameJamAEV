@@ -5,6 +5,9 @@ public class EnemySpawner : MonoBehaviour {
 
 	public GameObject[] spawnPoints;
 	public GameObject[] enemies;
+	public GameObject indicatorImage;
+	public float waitEnemies = 1.0f;
+
 	int[] positionsOcupated;
 	int spawnPosition, spawnEnemy, spawnedNumber;
 	private int[] enemiesToSpawn, typeOfEnemiesToSpawn;
@@ -56,7 +59,8 @@ public class EnemySpawner : MonoBehaviour {
 			if (spawnEnemy == 0) {
 				spawnPosition = Random.Range (0, spawnPoints.Length);
 				if (positionsOcupated [spawnPosition] != 1) {
-					Instantiate (enemies [spawnEnemy], spawnPoints [spawnPosition].transform.position, Quaternion.identity);
+					GameObject indicatorAux = (GameObject)Instantiate (indicatorImage, spawnPoints [spawnPosition].transform.position, Quaternion.identity);
+					StartCoroutine(delayNextWave(waitEnemies, indicatorAux, enemies [spawnEnemy],spawnPoints [spawnPosition].transform.position));
 					positionsOcupated [spawnPosition] = 1;
 					spawnedNumber++;
 				}
@@ -69,6 +73,12 @@ public class EnemySpawner : MonoBehaviour {
 				}
 			}
 		}
+	}
+
+	IEnumerator delayNextWave(float inXSeconds, GameObject indicator, GameObject enemy, Vector3 position){
+		yield return new WaitForSeconds(inXSeconds);
+		Destroy (indicator);
+		Instantiate (enemy, position, Quaternion.identity);
 	}
 
 
