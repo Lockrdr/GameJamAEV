@@ -66,8 +66,6 @@ public class GameManager : MonoBehaviour {
     public void checkState(float playerHp)
     {
        
-
-
         if (playerHp <= hpToBecomeAlive){
 
             changePlayerState(GameStates.PlayerState.Dead);

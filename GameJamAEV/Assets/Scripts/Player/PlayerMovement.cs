@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour {
     Vector2 wallRightPosition;
     Vector2 wallDownPosition;
     private PlayerCombat playerCombatScript;
-    private SpriteRenderer spriteRenderer;
+    //private SpriteRenderer spriteRenderer;
 
 	void Start () {
 
@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour {
         wallRightPosition = GameObject.Find("WallRight").transform.position;
         wallDownPosition = GameObject.Find("WallDown").transform.position;
         playerCombatScript = GetComponent<PlayerCombat>();
-        spriteRenderer = playerCombatScript.currentAnimController.GetComponent<SpriteRenderer>();
+        //spriteRenderer = playerCombatScript.currentAnimController.GetComponent<SpriteRenderer>();
         
     }
 

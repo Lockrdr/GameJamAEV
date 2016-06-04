@@ -22,6 +22,7 @@ public class PlayerAnimationController : MonoBehaviour {
     }
 	
 	
+
     public void playIdle()
     {
         if(!playerCombatScript.currentAnimController.GetCurrentAnimatorStateInfo(0).IsName("Idle"))

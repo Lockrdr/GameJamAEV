@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 403386}
   - 212: {fileID: 21246486}
   - 95: {fileID: 9565224}
+  - 114: {fileID: 11405252}
   m_Layer: 8
   m_Name: QuarterBody
   m_TagString: Untagged
@@ -27,6 +28,7 @@ GameObject:
   - 4: {fileID: 427364}
   - 212: {fileID: 21280720}
   - 95: {fileID: 9515330}
+  - 114: {fileID: 11434432}
   m_Layer: 8
   m_Name: FullBody
   m_TagString: Untagged
@@ -44,6 +46,7 @@ GameObject:
   - 4: {fileID: 469820}
   - 212: {fileID: 21249810}
   - 95: {fileID: 9532212}
+  - 114: {fileID: 11429458}
   m_Layer: 8
   m_Name: NoBody
   m_TagString: Untagged
@@ -61,6 +64,7 @@ GameObject:
   - 4: {fileID: 441094}
   - 212: {fileID: 21201844}
   - 95: {fileID: 9548224}
+  - 114: {fileID: 11425838}
   m_Layer: 8
   m_Name: HalfBody
   m_TagString: Untagged
@@ -78,6 +82,7 @@ GameObject:
   - 4: {fileID: 470206}
   - 212: {fileID: 21279112}
   - 95: {fileID: 9516064}
+  - 114: {fileID: 11460606}
   m_Layer: 8
   m_Name: ThreeQuarterBody
   m_TagString: Untagged
@@ -421,7 +426,7 @@ Animator:
   m_GameObject: {fileID: 128862}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: be70157121cec9643b5eae8a61de28a2, type: 2}
+  m_Controller: {fileID: 22100000, guid: 1310cb5830aa27a48a499ea50c926850, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -497,6 +502,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11405252
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a55e36c6c8cd242a5a1ca18a2b24ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageColor: {r: 0.99264705, g: 0.233564, b: 0.233564, a: 1}
 --- !u!114 &11413234
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -508,6 +525,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39d4d187b95b41049ae265115b0d9a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11425838
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a55e36c6c8cd242a5a1ca18a2b24ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageColor: {r: 0.99264705, g: 0.233564, b: 0.233564, a: 1}
+--- !u!114 &11429458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a55e36c6c8cd242a5a1ca18a2b24ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageColor: {r: 0.99264705, g: 0.233564, b: 0.233564, a: 1}
 --- !u!114 &11429784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -524,6 +565,18 @@ MonoBehaviour:
   shootSpeed: 2
   audioSource: {fileID: 0}
   m_attackingCooldown: 0.33
+--- !u!114 &11434432
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a55e36c6c8cd242a5a1ca18a2b24ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageColor: {r: 0.99264705, g: 0.233564, b: 0.233564, a: 1}
 --- !u!114 &11437812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -538,6 +591,18 @@ MonoBehaviour:
   m_playerHealth: 0
   m_invicibilityTime: 1
   currentAnimController: {fileID: 0}
+--- !u!114 &11460606
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a55e36c6c8cd242a5a1ca18a2b24ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageColor: {r: 0.99264705, g: 0.233564, b: 0.233564, a: 1}
 --- !u!114 &11467882
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -709,7 +774,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 529714297
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2c44cf67207f8bc4d8e3f86289080198, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6e237217e899b56499b2dc91bead0a23, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

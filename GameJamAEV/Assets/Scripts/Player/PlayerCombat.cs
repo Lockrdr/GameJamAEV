@@ -17,6 +17,7 @@ public class PlayerCombat : MonoBehaviour {
     private GameObject ThreeQuarterBodyGO;
     private GameObject FullBodyGO;
 
+    private SpriteRenderer spriteRenderer;
 
 	private AudioSource audioSource;
 
@@ -75,6 +76,7 @@ public class PlayerCombat : MonoBehaviour {
         currentAnimController.Play("Idle");
     }
 
+  
 
     public void addLife(float amount)
     {
@@ -83,7 +85,8 @@ public class PlayerCombat : MonoBehaviour {
             m_timeInvicible = m_invicibilityTime;
 
             //currentAnimController.Play("EnemyShootMe");
-            StartCoroutine(stopDamageAnim(m_invicibilityTime));
+            //playDamageAnim();
+            //StartCoroutine(stopDamageAnim(m_invicibilityTime));
 
             m_playerHealth += amount;
             audioSource.clip = SoundManager.getInstance().healthToThePlayer();
