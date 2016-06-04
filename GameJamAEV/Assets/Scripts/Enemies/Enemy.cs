@@ -21,6 +21,8 @@ public class Enemy : MonoBehaviour {
 
 	public AudioSource audioSource;
 
+
+
 	virtual public void Start(){
 		audioSource = gameObject.GetComponent<AudioSource> ();
 	}
@@ -35,6 +37,17 @@ public class Enemy : MonoBehaviour {
             {
 				die();
             }
+
+			//CAmbiar color
+			Color normalColor = transform.GetComponent<SpriteRenderer>().color;
+			Color tempColor = normalColor;
+			tempColor.b *= 0.7f;
+			tempColor.g *= 0.7f;
+			transform.GetComponent<SpriteRenderer> ().color = tempColor;
+			StartCoroutine (colorController(normalColor));
+
+			//-------------
+
         }
         
     }
@@ -85,5 +98,9 @@ public class Enemy : MonoBehaviour {
 
     }
 
+	IEnumerator colorController(Color oldColor){
+		yield return new WaitForSeconds (0.5f);
+		transform.GetComponent<SpriteRenderer> ().color = oldColor;
+	}
 
 }

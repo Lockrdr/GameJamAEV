@@ -27,7 +27,7 @@ public class ShootMoment : MonoBehaviour {
             coll.gameObject.GetComponent<Enemy>().receiveDamage(shootDamage);
             //Debug.Log("Enemigo");
         }
-        else if (coll.gameObject.CompareTag("Wall"))
+        else if (coll.gameObject.CompareTag("ShootWall"))
         {
             //Debug.Log("Pared");
         }
