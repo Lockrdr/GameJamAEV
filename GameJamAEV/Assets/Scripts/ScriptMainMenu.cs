@@ -13,7 +13,7 @@ public class ScriptMainMenu : MonoBehaviour {
 
     public void playGame()
     {
-        SceneManager.LoadScene("CombatScene");
+        SceneManager.LoadScene("TutoScene");
 
     }
 	

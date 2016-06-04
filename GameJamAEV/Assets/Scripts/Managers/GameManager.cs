@@ -97,7 +97,6 @@ public class GameManager : MonoBehaviour {
 
         if (m_enemyNumberControler == 0 && !watingNextWave)
         {
-            Debug.Log("Acabada");
             watingNextWave = true;
             GUIManager.getInstance().activeNexWaveText();
             StartCoroutine(delayNextWave(timeBetweenWaves));
