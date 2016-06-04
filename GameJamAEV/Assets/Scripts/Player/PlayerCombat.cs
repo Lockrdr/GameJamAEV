@@ -5,10 +5,18 @@ public class PlayerCombat : MonoBehaviour {
 
     public float m_playerHealth = 0f;
 
+    [Tooltip("Invencibility time after taking damage")]
+    public float m_invicibilityTime = 3f;
+
+    protected float m_timeInvicible;
+
+
     private GameObject NoBodyGO;
     private GameObject HalfBodyGO;
     private GameObject FullBodyGO;
 	private AudioSource audioSource;
+
+    private Animator currentAnimController;
 
     void Start()
     {
@@ -45,30 +53,51 @@ public class PlayerCombat : MonoBehaviour {
 
     }
 
-  
+    void Update()
+    {
+        m_timeInvicible -= Time.deltaTime;
+
+    }
+
+
+    IEnumerator stopDamageAnim(float inXSeconds)
+    {
+
+        yield return new WaitForSeconds(inXSeconds);
+        currentAnimController.Play("Idle");
+    }
+
 
     public void addLife(float amount)
     {
-        m_playerHealth += amount;
-		audioSource.clip = SoundManager.getInstance ().healthToThePlayer ();
-		audioSource.Play ();
-
-        if (m_playerHealth >= 100)
+        if (m_timeInvicible < 0)
         {
-            GameManager.getInstance().changePlayerState(GameStates.PlayerState.Resurrected);
-			audioSource.clip = SoundManager.getInstance ().playerDeath();
-			audioSource.Play ();
-            Debug.Log("Jugador revivido");
+            m_timeInvicible = m_invicibilityTime;
 
-        }else if(m_playerHealth > GameManager.getInstance().hpToBecomeAlive)
-        {
-            GameManager.getInstance().changePlayerState(GameStates.PlayerState.Alive);
+            currentAnimController.Play("EnemyShootMe");
+            StartCoroutine(stopDamageAnim(m_invicibilityTime));
 
-            //Debug.Log("Jugador con mas de 0 de vida. Estado Alive");
+            m_playerHealth += amount;
+            audioSource.clip = SoundManager.getInstance().healthToThePlayer();
+            audioSource.Play();
+
+            if (m_playerHealth >= 100)
+            {
+                GameManager.getInstance().changePlayerState(GameStates.PlayerState.Resurrected);
+                audioSource.clip = SoundManager.getInstance().playerDeath();
+                audioSource.Play();
+                Debug.Log("Jugador revivido");
+
+            }
+            else if (m_playerHealth > GameManager.getInstance().hpToBecomeAlive)
+            {
+                GameManager.getInstance().changePlayerState(GameStates.PlayerState.Alive);
+
+                //Debug.Log("Jugador con mas de 0 de vida. Estado Alive");
+            }
+            GUIManager.getInstance().updateHP(m_playerHealth);
+            updateSprite();
         }
-        GUIManager.getInstance().updateHP(m_playerHealth);
-        updateSprite();
-        
     }
     
 	
@@ -81,18 +110,21 @@ public class PlayerCombat : MonoBehaviour {
             NoBodyGO.SetActive(true);
             HalfBodyGO.SetActive(false);
             FullBodyGO.SetActive(false);
+            currentAnimController = NoBodyGO.GetComponent<Animator>();
         }
         else if (m_playerHealth < GameManager.getInstance().HpForFullBody)
         {
             NoBodyGO.SetActive(false);
             HalfBodyGO.SetActive(true);
             FullBodyGO.SetActive(false);
+            currentAnimController = HalfBodyGO.GetComponent<Animator>();
         }
         else
         {
             NoBodyGO.SetActive(false);
             HalfBodyGO.SetActive(false);
             FullBodyGO.SetActive(true);
+            currentAnimController = FullBodyGO.GetComponent<Animator>();
         }
     }
 }
