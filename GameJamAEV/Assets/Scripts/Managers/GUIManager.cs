@@ -14,7 +14,8 @@ public class GUIManager : MonoBehaviour {
         return m_instance;
     }
 
-
+    private GameObject nextWaveIncomingGO;
+    private GameObject getReadyGO;
 
     private Text m_lifeNumber;
     private Text m_waveNumber;
@@ -53,7 +54,40 @@ public class GUIManager : MonoBehaviour {
         botonPlayAgain = transform.Find("EndScreen/PlayAgainButton").GetComponent<Button>();
         botonMainMenu = transform.Find("EndScreen/BackToMenuButton").GetComponent<Button>();
         setButtonAutomatically();
+        
     }
+
+    public void activeNexWaveText()
+    {
+        if(nextWaveIncomingGO==null)
+        {
+            nextWaveIncomingGO = transform.Find("UI/NextWaveIncoming").gameObject;
+        }
+
+        nextWaveIncomingGO.SetActive(true);
+    }
+
+    public void deactiveNexWaveText()
+    {
+        if (nextWaveIncomingGO == null)
+        {
+            nextWaveIncomingGO = transform.Find("UI/NextWaveIncoming").gameObject;
+        }
+
+        nextWaveIncomingGO.SetActive(false);
+    }
+
+
+    public void deactiveGetReadyText()
+    {
+        if (getReadyGO == null)
+        {
+            getReadyGO = transform.Find("UI/GetReady").gameObject;
+        }
+
+        getReadyGO.SetActive(false);
+    }
+
 
     void setButtonAutomatically()
     {

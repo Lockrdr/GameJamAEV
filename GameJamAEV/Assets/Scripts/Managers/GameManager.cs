@@ -84,7 +84,7 @@ public class GameManager : MonoBehaviour {
         if (m_instance == null)
             m_instance = this;
 
-		GetComponent<EnemySpawner>().spawnWave (m_WaveNumber);
+        StartCoroutine(delayFirstWave(timeBetweenWaves));
 
 	}
 
@@ -96,12 +96,18 @@ public class GameManager : MonoBehaviour {
         {
             Debug.Log("Acabada");
             watingNextWave = true;
+            GUIManager.getInstance().activeNexWaveText();
             StartCoroutine(delayNextWave(timeBetweenWaves));
 			
 		}
 	}
 
-
+    IEnumerator delayFirstWave(float inXSeconds)
+    {
+        yield return new WaitForSeconds(inXSeconds);
+        GetComponent<EnemySpawner>().spawnWave(m_WaveNumber);
+        GUIManager.getInstance().deactiveGetReadyText();
+    }
     IEnumerator delayNextWave(float inXSeconds)
     {
         yield return new WaitForSeconds(inXSeconds);
@@ -111,6 +117,8 @@ public class GameManager : MonoBehaviour {
         audioSource.Play();
         GUIManager.getInstance().updateWaveNumber(m_WaveNumber);
         watingNextWave = false;
+        GUIManager.getInstance().deactiveNexWaveText();
+
     }
 
 	void endGame()
