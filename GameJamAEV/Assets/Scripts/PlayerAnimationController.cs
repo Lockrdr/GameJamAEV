@@ -3,9 +3,6 @@ using System.Collections;
 
 public class PlayerAnimationController : MonoBehaviour {
 
-    private GameObject NoBodyGO;
-    private GameObject HalfBodyGO;
-    private GameObject FullBodyGO;
 
     private PlayerCombat playerCombatScript;
 
@@ -21,9 +18,6 @@ public class PlayerAnimationController : MonoBehaviour {
         if (m_instance == null)
             m_instance = this;
 
-        NoBodyGO = gameObject.transform.Find("NoBody").gameObject;
-        HalfBodyGO = gameObject.transform.Find("HalfBody").gameObject;
-        FullBodyGO = gameObject.transform.Find("FullBody").gameObject;
         playerCombatScript = GetComponent<PlayerCombat>();
     }
 	

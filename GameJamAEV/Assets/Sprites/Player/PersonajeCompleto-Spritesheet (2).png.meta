@@ -1,25 +1,21 @@
 fileFormatVersion: 2
-guid: 927bd7b03aca1e848b2cb27fda6a3d02
-timeCreated: 1465076128
+guid: 96a3d27c5726e7d4e9bd078be256463a
+timeCreated: 1465077904
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: PersonajeMedio-Spritesheet (1)_0
-    21300002: PersonajeMedio-Spritesheet (1)_1
-    21300004: PersonajeMedio-Spritesheet (1)_2
-    21300006: PersonajeMedio-Spritesheet (1)_3
-    21300008: PersonajeMedio-Spritesheet (1)_4
-    21300010: PersonajeMedio-Spritesheet (1)_5
-    21300012: PersonajeMedio-Spritesheet (1)_6
-    21300014: PersonajeMedio-Spritesheet (1)_7
-    21300016: PersonajeMedio-Spritesheet (1)_8
-    21300018: PersonajeMedio-Spritesheet (1)_9
-    21300020: PersonajeMedio-Spritesheet (1)_10
-    21300022: PersonajeMedio-Spritesheet (1)_11
-    21300024: PersonajeMedio-Spritesheet (1)_12
-    21300026: PersonajeMedio-Spritesheet (1)_13
-    21300028: PersonajeMedio-Spritesheet (1)_14
-    21300030: PersonajeMedio-Spritesheet (1)_15
+    21300000: PersonajeCompleto-Spritesheet (2)_0
+    21300002: PersonajeCompleto-Spritesheet (2)_1
+    21300004: PersonajeCompleto-Spritesheet (2)_2
+    21300006: PersonajeCompleto-Spritesheet (2)_3
+    21300008: PersonajeCompleto-Spritesheet (2)_4
+    21300010: PersonajeCompleto-Spritesheet (2)_5
+    21300012: PersonajeCompleto-Spritesheet (2)_6
+    21300014: PersonajeCompleto-Spritesheet (2)_7
+    21300016: PersonajeCompleto-Spritesheet (2)_8
+    21300018: PersonajeCompleto-Spritesheet (2)_9
+    21300020: PersonajeCompleto-Spritesheet (2)_10
+    21300022: PersonajeCompleto-Spritesheet (2)_11
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -45,7 +41,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -66,10 +62,32 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: PersonajeMedio-Spritesheet (1)_0
+    - name: PersonajeCompleto-Spritesheet (2)_0
       rect:
         serializedVersion: 2
-        x: 23
+        x: 22
+        y: 99
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PersonajeCompleto-Spritesheet (2)_1
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 99
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PersonajeCompleto-Spritesheet (2)_2
+      rect:
+        serializedVersion: 2
+        x: 151
         y: 98
         width: 19
         height: 29
@@ -77,10 +95,10 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: PersonajeMedio-Spritesheet (1)_1
+    - name: PersonajeCompleto-Spritesheet (2)_3
       rect:
         serializedVersion: 2
-        x: 87
+        x: 215
         y: 98
         width: 19
         height: 28
@@ -88,32 +106,32 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: PersonajeMedio-Spritesheet (1)_2
+    - name: PersonajeCompleto-Spritesheet (2)_4
       rect:
         serializedVersion: 2
-        x: 150
-        y: 97
+        x: 22
+        y: 67
         width: 19
-        height: 31
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: PersonajeMedio-Spritesheet (1)_3
+    - name: PersonajeCompleto-Spritesheet (2)_5
       rect:
         serializedVersion: 2
-        x: 214
-        y: 97
+        x: 86
+        y: 67
         width: 19
-        height: 30
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: PersonajeMedio-Spritesheet (1)_4
+    - name: PersonajeCompleto-Spritesheet (2)_6
       rect:
         serializedVersion: 2
-        x: 23
+        x: 151
         y: 66
         width: 19
         height: 29
@@ -121,10 +139,10 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: PersonajeMedio-Spritesheet (1)_5
+    - name: PersonajeCompleto-Spritesheet (2)_7
       rect:
         serializedVersion: 2
-        x: 87
+        x: 215
         y: 66
         width: 19
         height: 28
@@ -132,112 +150,46 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: PersonajeMedio-Spritesheet (1)_6
+    - name: PersonajeCompleto-Spritesheet (2)_8
       rect:
         serializedVersion: 2
-        x: 150
-        y: 65
+        x: 22
+        y: 33
         width: 19
         height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: PersonajeMedio-Spritesheet (1)_7
+    - name: PersonajeCompleto-Spritesheet (2)_9
       rect:
         serializedVersion: 2
-        x: 214
-        y: 65
+        x: 86
+        y: 33
         width: 19
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: PersonajeMedio-Spritesheet (1)_8
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 33
-        width: 19
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: PersonajeMedio-Spritesheet (1)_9
-      rect:
-        serializedVersion: 2
-        x: 86
-        y: 33
-        width: 19
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: PersonajeMedio-Spritesheet (1)_10
-      rect:
-        serializedVersion: 2
-        x: 150
-        y: 33
-        width: 19
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: PersonajeMedio-Spritesheet (1)_11
-      rect:
-        serializedVersion: 2
-        x: 214
-        y: 33
-        width: 19
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: PersonajeMedio-Spritesheet (1)_12
+    - name: PersonajeCompleto-Spritesheet (2)_10
       rect:
         serializedVersion: 2
         x: 22
         y: 1
         width: 19
-        height: 29
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: PersonajeMedio-Spritesheet (1)_13
+    - name: PersonajeCompleto-Spritesheet (2)_11
       rect:
         serializedVersion: 2
         x: 86
         y: 1
         width: 19
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: PersonajeMedio-Spritesheet (1)_14
-      rect:
-        serializedVersion: 2
-        x: 150
-        y: 1
-        width: 19
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: PersonajeMedio-Spritesheet (1)_15
-      rect:
-        serializedVersion: 2
-        x: 214
-        y: 1
-        width: 19
-        height: 29
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

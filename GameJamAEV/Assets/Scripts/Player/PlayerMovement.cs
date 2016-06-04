@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             transform.Translate(0, Time.deltaTime * m_playerSpeed, 0);
             PlayerAnimationController.getInstance().playUp();
-            spriteRenderer.flipX = false;
+            playerCombatScript.currentAnimController.GetComponent<SpriteRenderer>().flipX = false;
 
         }
 
@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour {
             transform.Translate(0, Time.deltaTime * -m_playerSpeed, 0);
             PlayerAnimationController.getInstance().playDown();
 
-            spriteRenderer.flipX = false;
+            playerCombatScript.currentAnimController.GetComponent<SpriteRenderer>().flipX = false;
 
         }
 
@@ -46,14 +46,14 @@ public class PlayerMovement : MonoBehaviour {
         {
             PlayerAnimationController.getInstance().playLeft();
             transform.Translate(Time.deltaTime * -m_playerSpeed, 0, 0);
-            spriteRenderer.flipX = false;
+            playerCombatScript.currentAnimController.GetComponent<SpriteRenderer>().flipX = false;
 
         }
       
         if (Input.GetKey(KeyCode.D) && transform.position.x < wallRightPosition.x)
         {
             PlayerAnimationController.getInstance().playRight();
-            spriteRenderer.flipX = true;
+            playerCombatScript.currentAnimController.GetComponent<SpriteRenderer>().flipX = true;
             transform.Translate(Time.deltaTime * m_playerSpeed, 0, 0);
 
         }

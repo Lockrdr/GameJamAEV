@@ -1,9 +1,25 @@
 fileFormatVersion: 2
 guid: 48330c25aefc56441ae23b5a6f4a3d9e
-timeCreated: 1465069292
+timeCreated: 1465076847
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: PersonajeSegundoEstado-Spritesheet_0
+    21300002: PersonajeSegundoEstado-Spritesheet_1
+    21300004: PersonajeSegundoEstado-Spritesheet_2
+    21300006: PersonajeSegundoEstado-Spritesheet_3
+    21300008: PersonajeSegundoEstado-Spritesheet_4
+    21300010: PersonajeSegundoEstado-Spritesheet_5
+    21300012: PersonajeSegundoEstado-Spritesheet_6
+    21300014: PersonajeSegundoEstado-Spritesheet_7
+    21300016: PersonajeSegundoEstado-Spritesheet_8
+    21300018: PersonajeSegundoEstado-Spritesheet_9
+    21300020: PersonajeSegundoEstado-Spritesheet_10
+    21300022: PersonajeSegundoEstado-Spritesheet_11
+    21300024: PersonajeSegundoEstado-Spritesheet_12
+    21300026: PersonajeSegundoEstado-Spritesheet_13
+    21300028: PersonajeSegundoEstado-Spritesheet_14
+    21300030: PersonajeSegundoEstado-Spritesheet_15
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,18 +54,194 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 25
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: PersonajeSegundoEstado-Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 98
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PersonajeSegundoEstado-Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 98
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PersonajeSegundoEstado-Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 96
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PersonajeSegundoEstado-Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 96
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PersonajeSegundoEstado-Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 66
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PersonajeSegundoEstado-Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 66
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PersonajeSegundoEstado-Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 64
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PersonajeSegundoEstado-Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 64
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PersonajeSegundoEstado-Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 33
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PersonajeSegundoEstado-Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 33
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PersonajeSegundoEstado-Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 33
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PersonajeSegundoEstado-Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 33
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PersonajeSegundoEstado-Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 1
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PersonajeSegundoEstado-Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PersonajeSegundoEstado-Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PersonajeSegundoEstado-Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 1
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     outline: []
   spritePackingTag: 
   userData: 

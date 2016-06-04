@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: QuarterAnimator
+  m_Controller: {fileID: 9100000, guid: 404359714b200f640b0ca15a23ae11ba, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: ae0a170704bec1643a4f09e33ef0271d, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d9508a412a385d041a57dd99b8bf1295, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 458a7a630047cbf4a9b328be6174def8, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4965d87994440134182ea7cc8ed008af, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 2ba7799f6639e87419339d369ef390f9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 867db35be492d394a8b000ce177fc182, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 6d7b691a93ff63846badc312431c6f79, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 33399127c8337bb4d8effe58b1976453, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 6b2feba5a2f5d1c4aacb257b455a59fa, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: fa083d9987e06f34098fb136df070bed, type: 2}

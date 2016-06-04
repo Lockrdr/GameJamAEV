@@ -79,7 +79,7 @@ GameObject:
   - 212: {fileID: 21279112}
   - 95: {fileID: 9516064}
   m_Layer: 8
-  m_Name: ThreeQuaterBody
+  m_Name: ThreeQuarterBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -404,7 +404,7 @@ Animator:
   m_GameObject: {fileID: 119066}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1a6874d189dfa244daf53f3d1fe261d7, type: 2}
+  m_Controller: {fileID: 22100000, guid: 7b1479503f6d5134e8175351a9474a32, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -489,7 +489,7 @@ Animator:
   m_GameObject: {fileID: 112376}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: be70157121cec9643b5eae8a61de28a2, type: 2}
+  m_Controller: {fileID: 22100000, guid: 8a91fcfc7c4149b4980c1cb1be056356, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -589,7 +589,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 529714297
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 16680ea2a65e3cf4eb87226ff672a134, type: 3}
+  m_Sprite: {fileID: 21300016, guid: 927bd7b03aca1e848b2cb27fda6a3d02, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -649,7 +649,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 529714297
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2c44cf67207f8bc4d8e3f86289080198, type: 3}
+  m_Sprite: {fileID: 21300016, guid: 48330c25aefc56441ae23b5a6f4a3d9e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -739,7 +739,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 529714297
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1276afda6d8a5594292bf554ea3d24fd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 96a3d27c5726e7d4e9bd078be256463a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -196,7 +196,7 @@ MonoBehaviour:
   projectile: {fileID: 153618, guid: f9410d6cea06c9a4583d86043712e4b7, type: 2}
   m_enemyHP: 25
   m_attackingCooldown: 0.33
-  shootDamage: 5
+  shootDamage: 25
   shootSpeed: 0.7
   audioSource: {fileID: 0}
 --- !u!114 &11436526
@@ -311,6 +311,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: spreadCustomCurve.m_RotationOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shootDamage
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

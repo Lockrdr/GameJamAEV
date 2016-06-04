@@ -12,8 +12,12 @@ public class PlayerCombat : MonoBehaviour {
 
 
     private GameObject NoBodyGO;
+    private GameObject QuarterBodyGO;
     private GameObject HalfBodyGO;
+    private GameObject ThreeQuarterBodyGO;
     private GameObject FullBodyGO;
+
+
 	private AudioSource audioSource;
 
     public Animator currentAnimController;
@@ -23,7 +27,11 @@ public class PlayerCombat : MonoBehaviour {
 
         GUIManager.getInstance().updateHP(m_playerHealth);
         NoBodyGO = gameObject.transform.Find("NoBody").gameObject;
+        QuarterBodyGO = gameObject.transform.Find("QuarterBody").gameObject;
+        
         HalfBodyGO = gameObject.transform.Find("HalfBody").gameObject;
+        ThreeQuarterBodyGO = gameObject.transform.Find("ThreeQuarterBody").gameObject;
+
         FullBodyGO = gameObject.transform.Find("FullBody").gameObject;
         updateSprite();
         GameManager.getInstance().checkState(m_playerHealth);
@@ -105,23 +113,47 @@ public class PlayerCombat : MonoBehaviour {
     
     void updateSprite()
     {
-        if(m_playerHealth < GameManager.getInstance().HpForHalfBody)
+        if(m_playerHealth < GameManager.getInstance().HpForQuarterBody)
         {
             NoBodyGO.SetActive(true);
+            QuarterBodyGO.SetActive(false);
+            ThreeQuarterBodyGO.SetActive(false);
             HalfBodyGO.SetActive(false);
             FullBodyGO.SetActive(false);
             currentAnimController = NoBodyGO.GetComponent<Animator>();
         }
-        else if (m_playerHealth < GameManager.getInstance().HpForFullBody)
+        else if(m_playerHealth < GameManager.getInstance().HpForHalfBody)
         {
             NoBodyGO.SetActive(false);
+            QuarterBodyGO.SetActive(true);
+            ThreeQuarterBodyGO.SetActive(false);
+            HalfBodyGO.SetActive(false);
+            FullBodyGO.SetActive(false);
+            currentAnimController = QuarterBodyGO.GetComponent<Animator>();
+        }
+        else if (m_playerHealth < GameManager.getInstance().HpForThreeQuarterBody)
+        {
+            NoBodyGO.SetActive(false);
+            QuarterBodyGO.SetActive(false);
+            ThreeQuarterBodyGO.SetActive(false);
             HalfBodyGO.SetActive(true);
             FullBodyGO.SetActive(false);
             currentAnimController = HalfBodyGO.GetComponent<Animator>();
         }
+        else if (m_playerHealth < GameManager.getInstance().HpForFullBody)
+        {
+            NoBodyGO.SetActive(false);
+            QuarterBodyGO.SetActive(false);
+            ThreeQuarterBodyGO.SetActive(true);
+            HalfBodyGO.SetActive(false);
+            FullBodyGO.SetActive(false);
+            currentAnimController = ThreeQuarterBodyGO.GetComponent<Animator>();
+        }
         else
         {
             NoBodyGO.SetActive(false);
+            QuarterBodyGO.SetActive(false);
+            ThreeQuarterBodyGO.SetActive(false);
             HalfBodyGO.SetActive(false);
             FullBodyGO.SetActive(true);
             currentAnimController = FullBodyGO.GetComponent<Animator>();

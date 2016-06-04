@@ -21,10 +21,12 @@ public class GameManager : MonoBehaviour {
 
     public float hpToBecomeAlive = 50f;
 
-    public float HpForFullBody = 50f;
-    public float HpForHalfBody = 25f;
-
-	public Texture2D newCursor;
+    public float HpForFullBody = 100f;
+    public float HpForThreeQuarterBody = 75f;
+    public float HpForHalfBody = 50f;
+    public float HpForQuarterBody = 25f;
+    
+    public Texture2D newCursor;
 
 
 
@@ -66,7 +68,7 @@ public class GameManager : MonoBehaviour {
 
             changePlayerState(GameStates.PlayerState.Dead);
         }
-        else if (playerHp >= 100){
+        else if (playerHp > 105){
             changePlayerState(GameStates.PlayerState.Resurrected);
         }
         else if (playerHp > GameManager.getInstance().hpToBecomeAlive)
