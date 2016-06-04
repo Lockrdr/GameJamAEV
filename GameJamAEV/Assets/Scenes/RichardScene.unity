@@ -144,6 +144,14 @@ Prefab:
       propertyPath: spawnPoints.Array.data[4]
       value: 
       objectReference: {fileID: 1035544307}
+    - target: {fileID: 11498834, guid: 57b701928f4df2e43a303f06ebb3111d, type: 2}
+      propertyPath: m_playerState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11498834, guid: 57b701928f4df2e43a303f06ebb3111d, type: 2}
+      propertyPath: m_WaveNumber
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57b701928f4df2e43a303f06ebb3111d, type: 2}
   m_IsPrefabParent: 0
@@ -386,6 +394,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11437812, guid: fea175bef40740d428cfeb9b5cbf6251, type: 2}
+      propertyPath: m_playerHealth
+      value: 51
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fea175bef40740d428cfeb9b5cbf6251, type: 2}
   m_IsPrefabParent: 0
@@ -493,6 +505,10 @@ Prefab:
     - target: {fileID: 409508, guid: b03d8645072db7147bacfdc60274b870, type: 2}
       propertyPath: m_LocalPosition.x
       value: 8.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176870, guid: b03d8645072db7147bacfdc60274b870, type: 2}
+      propertyPath: m_UsedByEffector
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b03d8645072db7147bacfdc60274b870, type: 2}

@@ -17,6 +17,9 @@ public class GUIManager : MonoBehaviour {
 
 
     private Text m_lifeNumber;
+    private Text m_waveNumber;
+
+    
     private Image m_healthBar;
 
     private PlayerMovement m_playerMovement;
@@ -29,14 +32,22 @@ public class GUIManager : MonoBehaviour {
     void Awake()
     {
         m_lifeNumber = transform.Find("UI/Life/LifeNumber").GetComponent<Text>();
+        m_waveNumber = transform.Find("UI/Wave/WaveNumber").GetComponent<Text>();
     }
 
     void Start()
     {
         if (m_instance == null)
             m_instance = this;
+
+        updateWaveNumber(GameManager.getInstance().m_WaveNumber);
     }
-    
+
+    public void updateWaveNumber(int wave)
+    {
+        m_waveNumber.text = "" + wave;
+    }
+
     /// <summary>
     /// Update hp points
     /// </summary>

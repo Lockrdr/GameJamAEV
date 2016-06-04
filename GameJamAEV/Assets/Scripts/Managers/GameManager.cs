@@ -40,10 +40,8 @@ public class GameManager : MonoBehaviour {
 	void Start () {
         if (m_instance == null)
             m_instance = this;
+
 	}
 	
 	
-	void Update () {
-	
-	}
 }
