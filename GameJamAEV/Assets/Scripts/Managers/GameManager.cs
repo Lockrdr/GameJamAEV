@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour {
     public float HpForFullBody = 50f;
     public float HpForHalfBody = 25f;
 
-
+	public Sprite newCursor;
 
 
 
@@ -78,6 +78,9 @@ public class GameManager : MonoBehaviour {
         
 
 	void Start () {
+
+		Cursor.SetCursor (newCursor.texture, Vector2.zero, CursorMode.Auto);
+
         Time.timeScale = 1;
 
 		audioSource = gameObject.GetComponent<AudioSource> ();
