@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour {
     public float HpForFullBody = 50f;
     public float HpForHalfBody = 25f;
 
-	public Sprite newCursor;
+	public Texture2D newCursor;
 
 
 
@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour {
 
 	void Start () {
 
-		Cursor.SetCursor (newCursor.texture, Vector2.zero, CursorMode.Auto);
+		Cursor.SetCursor (newCursor, new Vector2(64f,64f), CursorMode.Auto);
 
         Time.timeScale = 1;
 
@@ -101,7 +101,6 @@ public class GameManager : MonoBehaviour {
             watingNextWave = true;
             GUIManager.getInstance().activeNexWaveText();
             StartCoroutine(delayNextWave(timeBetweenWaves));
-			
 		}
 	}
 
@@ -111,11 +110,15 @@ public class GameManager : MonoBehaviour {
         GetComponent<EnemySpawner>().spawnWave(m_WaveNumber);
         GUIManager.getInstance().deactiveGetReadyText();
     }
+
     IEnumerator delayNextWave(float inXSeconds)
     {
-		GetComponent<TrapsSpawner>().spawnTramp();
+		
         yield return new WaitForSeconds(inXSeconds);
         m_WaveNumber++;
+		if (m_WaveNumber % 2 == 0) {
+			GetComponent<TrapsSpawner>().spawnTramp();
+		}
         GetComponent<EnemySpawner>().spawnWave(m_WaveNumber);
         audioSource.clip = SoundManager.getInstance().startWave();
         audioSource.Play();
