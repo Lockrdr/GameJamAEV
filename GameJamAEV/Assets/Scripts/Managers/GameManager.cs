@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour {
     public float HpForFullBody = 50f;
     public float HpForHalfBody = 25f;
 
+	public AudioSource audioSource;
+
 
     //public enum PlayerState { Alive = 0, Dead = 1, Resurrected = 2 };
     public GameStates.PlayerState m_playerState;
@@ -42,7 +44,8 @@ public class GameManager : MonoBehaviour {
 
 
 	void Start () {
-		
+
+		audioSource = gameObject.GetComponent<AudioSource> ();
         if (m_instance == null)
             m_instance = this;
 
@@ -54,6 +57,8 @@ public class GameManager : MonoBehaviour {
 		if (m_enemyNumberControler == 0) {
 			Debug.Log ("Acabada");
 			GetComponent<EnemySpawner>().spawnWave (1);
+			audioSource.clip = SoundManager.getInstance ().startWave ();
+			audioSource.Play ();
 			m_enemyNumberControler = 2;
 			m_WaveNumber++;
 			GUIManager.getInstance ().updateWaveNumber (m_WaveNumber);

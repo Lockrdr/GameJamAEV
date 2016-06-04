@@ -8,7 +8,7 @@ public class PlayerCombat : MonoBehaviour {
     private GameObject NoBodyGO;
     private GameObject HalfBodyGO;
     private GameObject FullBodyGO;
-
+	private AudioSource audioSource;
 
     void Start()
     {
@@ -20,16 +20,22 @@ public class PlayerCombat : MonoBehaviour {
         updateSprite();
         GameManager.getInstance().checkState(m_playerHealth);
 
+		audioSource = gameObject.GetComponent<AudioSource> ();
+
     }
 
     public void substractLife(float amount)
     {
         m_playerHealth -= amount;
+		audioSource.clip = SoundManager.getInstance ().damageToThePlayer ();
+		audioSource.Play ();
+
         if (m_playerHealth <= GameManager.getInstance().hpToBecomeAlive)
         {
-            if (m_playerHealth < 0)
-                m_playerHealth = 0;
+			if (m_playerHealth < 0) {
+				m_playerHealth = 0;
 
+			}
             GameManager.getInstance().changePlayerState(GameStates.PlayerState.Dead);
             //Debug.Log("Jugador con menos de 0 de vida. Estado Dead");
 
@@ -44,11 +50,14 @@ public class PlayerCombat : MonoBehaviour {
     public void addLife(float amount)
     {
         m_playerHealth += amount;
+		audioSource.clip = SoundManager.getInstance ().healthToThePlayer ();
+		audioSource.Play ();
 
         if (m_playerHealth >= 100)
         {
             GameManager.getInstance().changePlayerState(GameStates.PlayerState.Resurrected);
-
+			audioSource.clip = SoundManager.getInstance ().playerDeath();
+			audioSource.Play ();
             Debug.Log("Jugador revivido");
 
         }else if(m_playerHealth > GameManager.getInstance().hpToBecomeAlive)

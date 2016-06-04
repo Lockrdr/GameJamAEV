@@ -13,6 +13,7 @@ public class PatrollingEnemy : Enemy {
     public Vector3 newPostionTransform;
 
 	void Start () {
+		base.Start ();
         newPostionTransform = waypoint2.localPosition;	
 	}
 

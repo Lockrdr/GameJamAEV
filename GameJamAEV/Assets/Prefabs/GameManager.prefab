@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 483180}
   - 114: {fileID: 11498834}
   - 114: {fileID: 11490738}
-  - 114: {fileID: 11491960}
+  - 82: {fileID: 8283452}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -30,6 +30,80 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!82 &8283452
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119360}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &11490738
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -42,7 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoints:
-  - {fileID: 197984, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
+  - {fileID: 109144, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
   - {fileID: 194464, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
   - {fileID: 198898, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
   - {fileID: 131452, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
@@ -57,19 +131,6 @@ MonoBehaviour:
   enemies:
   - {fileID: 101742, guid: fa9d16ebf3137384d9b402d541cbccc8, type: 2}
   - {fileID: 149880, guid: 20557b653073f3b4ba87c32129676a8f, type: 2}
---- !u!114 &11491960
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 119360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7917aad35cde514bb34c2786f2cfa70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoints: []
-  enemies: []
 --- !u!114 &11498834
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -86,6 +147,7 @@ MonoBehaviour:
   hpToBecomeAlive: 50
   HpForFullBody: 50
   HpForHalfBody: 25
+  audioSource: {fileID: 0}
   m_playerState: 0
 --- !u!1001 &100100000
 Prefab:
@@ -101,7 +163,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: spawnPoints.Array.data[0]
       value: 
-      objectReference: {fileID: 197984, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
+      objectReference: {fileID: 109144, guid: 21576a87c9dd65d4ab123a0e05160948, type: 2}
     - target: {fileID: 0}
       propertyPath: spawnPoints.Array.data[1]
       value: 

@@ -19,6 +19,11 @@ public class Enemy : MonoBehaviour {
     public float shootDamage = 5f;
     public float shootSpeed = 3f;
 
+	public AudioSource audioSource;
+
+	public void Start(){
+		audioSource = gameObject.GetComponent<AudioSource> ();
+	}
 
     virtual public void receiveDamage(float damage)
     {
@@ -28,7 +33,7 @@ public class Enemy : MonoBehaviour {
 
             if (m_enemyHP <= 0)
             {
-                die();
+				die();
             }
         }
         
@@ -36,6 +41,8 @@ public class Enemy : MonoBehaviour {
 
     virtual internal void die()
     {
+		audioSource.clip = SoundManager.getInstance ().enemyDeath ();
+		audioSource.Play ();
 		GameManager.getInstance ().m_enemyNumberControler--;
 		Destroy(gameObject);
     }
@@ -56,6 +63,8 @@ public class Enemy : MonoBehaviour {
        if (m_timeSinceLastAttack < 0)
         {
             //Debug.Log("Te ataco");
+			audioSource.clip = SoundManager.getInstance ().enemyShoot();
+			audioSource.Play ();
             GameObject shootInstance = (GameObject)Instantiate(projectile, transform.position, Quaternion.identity);
             shootInstance.GetComponent<EnemyProjectile>().setDamage(shootDamage);
             shootInstance.GetComponent<EnemyProjectile>().setSpeed(shootSpeed);
