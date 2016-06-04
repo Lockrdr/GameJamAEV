@@ -15,6 +15,7 @@ public class GUIManager : MonoBehaviour {
     }
 
     private GameObject nextWaveIncomingGO;
+    private GameObject getReadyGO;
 
     private Text m_lifeNumber;
     private Text m_waveNumber;
@@ -74,6 +75,17 @@ public class GUIManager : MonoBehaviour {
         }
 
         nextWaveIncomingGO.SetActive(false);
+    }
+
+
+    public void deactiveGetReadyText()
+    {
+        if (getReadyGO == null)
+        {
+            getReadyGO = transform.Find("UI/GetReady").gameObject;
+        }
+
+        getReadyGO.SetActive(false);
     }
 
 
