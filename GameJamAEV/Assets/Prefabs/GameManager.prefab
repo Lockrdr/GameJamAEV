@@ -143,10 +143,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_WaveNumber: 1
+  timeBetweenWaves: 3
   m_enemyNumberControler: 2
-  hpToBecomeAlive: 50
-  HpForFullBody: 50
-  HpForHalfBody: 25
+  hpToBecomeAlive: 75
+  HpForFullBody: 95
+  HpForHalfBody: 50
   audioSource: {fileID: 0}
   m_playerState: 0
 --- !u!1001 &100100000
