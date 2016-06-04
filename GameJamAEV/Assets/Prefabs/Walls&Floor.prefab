@@ -413,7 +413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shakeTime: 0.05
-  shakeAmount: 0.2
+  shakeAmount: 0.1
   decreaseFactor: 0.3
 --- !u!212 &21287232
 SpriteRenderer:
