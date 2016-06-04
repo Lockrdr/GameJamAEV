@@ -74,7 +74,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 11.110851
+  m_Radius: 25
 --- !u!61 &6167090
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_playerDetected: 0
   projectile: {fileID: 153618, guid: f9410d6cea06c9a4583d86043712e4b7, type: 2}
   m_enemyHP: 25
-  m_attackingCooldown: 1.5
+  m_attackingCooldown: 1
   shootDamage: 5
   shootSpeed: 0.7
   audioSource: {fileID: 0}
@@ -276,7 +276,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_attackingCooldown
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: panLevelCustomCurve.m_RotationOrder
@@ -285,6 +285,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Radius
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

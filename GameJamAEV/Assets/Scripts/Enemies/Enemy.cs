@@ -68,7 +68,7 @@ public class Enemy : MonoBehaviour {
             GameObject shootInstance = (GameObject)Instantiate(projectile, transform.position, Quaternion.identity);
             shootInstance.GetComponent<EnemyProjectile>().setDamage(shootDamage);
             shootInstance.GetComponent<EnemyProjectile>().setSpeed(shootSpeed);
-            m_timeSinceLastAttack = m_attackingCooldown;
+			m_timeSinceLastAttack = m_attackingCooldown + Random.Range(0f,0.5f);
         }
     }
 

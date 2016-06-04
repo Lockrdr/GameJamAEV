@@ -60,11 +60,9 @@ public class GameManager : MonoBehaviour {
 
 		if (m_enemyNumberControler == 0) {
 			Debug.Log ("Acabada");
-			GetComponent<EnemySpawner>().spawnWave (1);
+			GetComponent<EnemySpawner>().spawnWave (m_WaveNumber++);
 			audioSource.clip = SoundManager.getInstance ().startWave ();
 			audioSource.Play ();
-			m_enemyNumberControler = 2;
-			m_WaveNumber++;
 			GUIManager.getInstance ().updateWaveNumber (m_WaveNumber);
 		}
 	}
