@@ -89,7 +89,7 @@ public class PlayerCombat : MonoBehaviour {
             audioSource.clip = SoundManager.getInstance().healthToThePlayer();
             audioSource.Play();
 
-            if (m_playerHealth >= 100)
+            if (m_playerHealth >= GameManager.getInstance().hpEndGame)
             {
                 GameManager.getInstance().changePlayerState(GameStates.PlayerState.Resurrected);
                 audioSource.clip = SoundManager.getInstance().playerDeath();

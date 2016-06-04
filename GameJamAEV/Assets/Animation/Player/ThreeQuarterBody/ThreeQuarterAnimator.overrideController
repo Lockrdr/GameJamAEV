@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: ThreeQuarterAnimator
+  m_Controller: {fileID: 9100000, guid: 404359714b200f640b0ca15a23ae11ba, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: ae0a170704bec1643a4f09e33ef0271d, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 85441b997a771c143acbe73b29209318, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 458a7a630047cbf4a9b328be6174def8, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: fe6ec684166e15a4cae28e236aacf651, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 2ba7799f6639e87419339d369ef390f9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f1b3de2f2d7a2fe4fa37ee54b00c73a8, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 6d7b691a93ff63846badc312431c6f79, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 1d9b0a8615c1256469f1af9e4bf568e8, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 6b2feba5a2f5d1c4aacb257b455a59fa, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6fdeb7454389d1f41bbb8a6466bb6973, type: 2}

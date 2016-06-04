@@ -19,13 +19,17 @@ public class GameManager : MonoBehaviour {
     public int m_enemyNumberControler = 8;
     private bool watingNextWave = false;
 
+
     public float hpToBecomeAlive = 50f;
 
     public float HpForFullBody = 100f;
     public float HpForThreeQuarterBody = 75f;
     public float HpForHalfBody = 50f;
     public float HpForQuarterBody = 25f;
-    
+
+    public float hpEndGame = 125f;
+
+
     public Texture2D newCursor;
 
 
@@ -68,7 +72,8 @@ public class GameManager : MonoBehaviour {
 
             changePlayerState(GameStates.PlayerState.Dead);
         }
-        else if (playerHp > 105){
+        else if (playerHp > hpEndGame)
+        {
             changePlayerState(GameStates.PlayerState.Resurrected);
         }
         else if (playerHp > GameManager.getInstance().hpToBecomeAlive)
