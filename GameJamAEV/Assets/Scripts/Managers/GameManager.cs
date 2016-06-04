@@ -110,6 +110,7 @@ public class GameManager : MonoBehaviour {
     }
     IEnumerator delayNextWave(float inXSeconds)
     {
+		GetComponent<TrapsSpawner>().spawnTramp();
         yield return new WaitForSeconds(inXSeconds);
         m_WaveNumber++;
         GetComponent<EnemySpawner>().spawnWave(m_WaveNumber);
