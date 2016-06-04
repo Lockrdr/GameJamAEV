@@ -13,9 +13,6 @@ public class EnemySpawner : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-
-		spawnWave (1);
-
 	}
 	
 	// Update is called once per frame
@@ -27,6 +24,8 @@ public class EnemySpawner : MonoBehaviour {
 		typeOfEnemiesToSpawn = new int[] 
 								{1,1,1,1,1,1,1,1,1, //Rondas 1 a 9
 								 2,2,2,2,2,2,2,2,2,2}; //Rondas 10 a 19
+
+		Debug.Log (wave - 1);
 
 		if (enemiesToSpawn.Length < wave) {
 			enemiesInThisWave = enemiesToSpawn [enemiesToSpawn.Length-1];

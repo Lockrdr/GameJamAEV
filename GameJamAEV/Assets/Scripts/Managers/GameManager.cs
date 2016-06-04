@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour {
     private GameObject playerOrb;
     
     public int m_WaveNumber = 1;
-	public int m_enemyNumberControler = 2;
+	public int m_enemyNumberControler = 8;
 
     public float hpToBecomeAlive = 50f;
 
@@ -77,6 +77,7 @@ public class GameManager : MonoBehaviour {
         if (m_instance == null)
             m_instance = this;
 
+		GetComponent<EnemySpawner>().spawnWave (m_WaveNumber);
 
 	}
 
@@ -84,7 +85,8 @@ public class GameManager : MonoBehaviour {
 
 		if (m_enemyNumberControler == 0) {
 			Debug.Log ("Acabada");
-			GetComponent<EnemySpawner>().spawnWave (m_WaveNumber++);
+			m_WaveNumber++;
+			GetComponent<EnemySpawner>().spawnWave (m_WaveNumber);
 			audioSource.clip = SoundManager.getInstance ().startWave ();
 			audioSource.Play ();
 			GUIManager.getInstance ().updateWaveNumber (m_WaveNumber);
