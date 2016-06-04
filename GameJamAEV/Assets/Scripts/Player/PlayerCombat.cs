@@ -9,6 +9,19 @@ public class PlayerCombat : MonoBehaviour {
     private GameObject HalfBodyGO;
     private GameObject FullBodyGO;
 
+
+    void Start()
+    {
+
+        GUIManager.getInstance().updateHP(m_playerHealth);
+        NoBodyGO = gameObject.transform.Find("NoBody").gameObject;
+        HalfBodyGO = gameObject.transform.Find("HalfBody").gameObject;
+        FullBodyGO = gameObject.transform.Find("FullBody").gameObject;
+        updateSprite();
+        GameManager.getInstance().checkState(m_playerHealth);
+
+    }
+
     public void substractLife(float amount)
     {
         m_playerHealth -= amount;
@@ -26,6 +39,7 @@ public class PlayerCombat : MonoBehaviour {
 
     }
 
+  
 
     public void addLife(float amount)
     {
@@ -48,16 +62,7 @@ public class PlayerCombat : MonoBehaviour {
         
     }
     
-	void Start () {
-
-        GUIManager.getInstance().updateHP(m_playerHealth);
-        NoBodyGO = gameObject.transform.Find("NoBody").gameObject;
-        HalfBodyGO = gameObject.transform.Find("HalfBody").gameObject;
-        FullBodyGO = gameObject.transform.Find("FullBody").gameObject;
-        updateSprite();
-        GameManager.getInstance().checkState(m_playerHealth);
-
-	}
+	
 	
     
     void updateSprite()
