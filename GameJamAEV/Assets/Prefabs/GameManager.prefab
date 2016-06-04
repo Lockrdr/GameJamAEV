@@ -131,6 +131,8 @@ MonoBehaviour:
   enemies:
   - {fileID: 101742, guid: fa9d16ebf3137384d9b402d541cbccc8, type: 2}
   - {fileID: 149880, guid: 20557b653073f3b4ba87c32129676a8f, type: 2}
+  indicatorImage: {fileID: 140070, guid: 457a3e5ec11a7cd4ba666fef20181aa0, type: 2}
+  waitEnemies: 1
 --- !u!114 &11498834
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -143,6 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_WaveNumber: 1
+  timeBetweenWaves: 3
   m_enemyNumberControler: 2
   hpToBecomeAlive: 50
   HpForFullBody: 50
