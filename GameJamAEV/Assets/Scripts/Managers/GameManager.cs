@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour {
 
 
     public Texture2D newCursor;
-
+    private GameObject WallFloors;
 
 
 	public AudioSource audioSource;
@@ -85,6 +85,7 @@ public class GameManager : MonoBehaviour {
 	void Start () {
 
 		Cursor.SetCursor (newCursor, new Vector2(64f,64f), CursorMode.Auto);
+        WallFloors = GameObject.Find("Walls&Floor").gameObject;
 
         Time.timeScale = 1;
 
@@ -134,6 +135,7 @@ public class GameManager : MonoBehaviour {
 
 	void endGame()
     {
+        WallFloors.GetComponent<CameraShakeEffects>().CancelShake();
         Time.timeScale = 0;
         GUIManager.getInstance().getEndScreen().SetActive(true);
     }

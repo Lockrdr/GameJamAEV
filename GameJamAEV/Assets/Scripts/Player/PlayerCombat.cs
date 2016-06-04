@@ -18,6 +18,7 @@ public class PlayerCombat : MonoBehaviour {
     private GameObject FullBodyGO;
 
     private SpriteRenderer spriteRenderer;
+    private GameObject WallFloors ;
 
 	private AudioSource audioSource;
 
@@ -25,7 +26,7 @@ public class PlayerCombat : MonoBehaviour {
 
     void Start()
     {
-
+ 
         GUIManager.getInstance().updateHP(m_playerHealth);
         NoBodyGO = gameObject.transform.Find("NoBody").gameObject;
         QuarterBodyGO = gameObject.transform.Find("QuarterBody").gameObject;
@@ -36,6 +37,8 @@ public class PlayerCombat : MonoBehaviour {
         FullBodyGO = gameObject.transform.Find("FullBody").gameObject;
         updateSprite();
         GameManager.getInstance().checkState(m_playerHealth);
+
+        WallFloors = GameObject.Find("Walls&Floor").gameObject;
 
 		audioSource = gameObject.GetComponent<AudioSource> ();
 
@@ -91,6 +94,8 @@ public class PlayerCombat : MonoBehaviour {
             m_playerHealth += amount;
             audioSource.clip = SoundManager.getInstance().healthToThePlayer();
             audioSource.Play();
+
+            WallFloors.GetComponent<CameraShakeEffects>().ShakeCamera();
 
             if (m_playerHealth >= GameManager.getInstance().hpEndGame)
             {
