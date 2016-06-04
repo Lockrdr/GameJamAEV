@@ -111,4 +111,9 @@ public class GUIManager : MonoBehaviour {
         Application.Quit();
     }
 
+
+    public GameObject getEndScreen()
+    {
+        return transform.Find("EndScreen").gameObject;
+    }
 }
