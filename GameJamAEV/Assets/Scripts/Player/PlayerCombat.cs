@@ -16,7 +16,7 @@ public class PlayerCombat : MonoBehaviour {
     private GameObject FullBodyGO;
 	private AudioSource audioSource;
 
-    private Animator currentAnimController;
+    public Animator currentAnimController;
 
     void Start()
     {
@@ -74,7 +74,7 @@ public class PlayerCombat : MonoBehaviour {
         {
             m_timeInvicible = m_invicibilityTime;
 
-            currentAnimController.Play("EnemyShootMe");
+            //currentAnimController.Play("EnemyShootMe");
             StartCoroutine(stopDamageAnim(m_invicibilityTime));
 
             m_playerHealth += amount;

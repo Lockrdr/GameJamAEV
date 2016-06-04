@@ -1,0 +1,201 @@
+fileFormatVersion: 2
+guid: 882e3fe70447a3f47a89c90dcd65cfc1
+timeCreated: 1465070990
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Skeleton-Spritesheet_0
+    21300002: Skeleton-Spritesheet_1
+    21300004: Skeleton-Spritesheet_2
+    21300006: Skeleton-Spritesheet_3
+    21300008: Skeleton-Spritesheet_4
+    21300010: Skeleton-Spritesheet_5
+    21300012: Skeleton-Spritesheet_6
+    21300014: Skeleton-Spritesheet_7
+    21300016: Skeleton-Spritesheet_8
+    21300018: Skeleton-Spritesheet_9
+    21300020: Skeleton-Spritesheet_10
+    21300022: Skeleton-Spritesheet_11
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 25
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Skeleton-Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 99
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Skeleton-Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 99
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Skeleton-Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 97
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Skeleton-Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 97
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Skeleton-Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 67
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Skeleton-Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 67
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Skeleton-Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 65
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Skeleton-Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 65
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Skeleton-Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 34
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Skeleton-Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 34
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Skeleton-Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 2
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Skeleton-Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 2
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
