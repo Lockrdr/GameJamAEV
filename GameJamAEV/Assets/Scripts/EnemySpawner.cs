@@ -28,8 +28,6 @@ public class EnemySpawner : MonoBehaviour {
 								{1,1,1,1,1,1,1,1,1, //Rondas 1 a 9
 								 2,2,2,2,2,2,2,2,2,2}; //Rondas 10 a 19
 
-		Debug.Log (wave - 1);
-
 		if (enemiesToSpawn.Length < wave) {
 			enemiesInThisWave = enemiesToSpawn [enemiesToSpawn.Length-1];
 		} else {
@@ -54,20 +52,21 @@ public class EnemySpawner : MonoBehaviour {
 
 		while(spawnedNumber < enemiesInThisWave){
 
-			spawnEnemy = Random.Range (0, typeOfEnemiesInThisWave-1);
-
+			spawnEnemy = Random.Range (0, typeOfEnemiesInThisWave);
+ 
 			if (spawnEnemy == 0) {
 				spawnPosition = Random.Range (0, spawnPoints.Length);
 				if (positionsOcupated [spawnPosition] != 1) {
 					GameObject indicatorAux = (GameObject)Instantiate (indicatorImage, spawnPoints [spawnPosition].transform.position, Quaternion.identity);
-					StartCoroutine(delayNextWave(waitEnemies, indicatorAux, enemies [spawnEnemy],spawnPoints [spawnPosition].transform.position));
+					StartCoroutine(delayEnemySpawn(waitEnemies, indicatorAux, enemies [spawnEnemy],spawnPoints [spawnPosition].transform.position));
 					positionsOcupated [spawnPosition] = 1;
 					spawnedNumber++;
 				}
 			} else if (spawnEnemy == 1) {
 				spawnPosition = Random.Range (8, 11); 
 				if (positionsOcupated [spawnPosition] != 1) {
-					Instantiate (enemies [spawnEnemy], spawnPoints [spawnPosition].transform.position, Quaternion.identity);
+					GameObject indicatorAux = (GameObject)Instantiate (indicatorImage, spawnPoints [spawnPosition].transform.position, Quaternion.identity);
+					StartCoroutine(delayEnemySpawn(waitEnemies, indicatorAux, enemies [spawnEnemy],spawnPoints [spawnPosition].transform.position));
 					positionsOcupated [spawnPosition] = 1;
 					spawnedNumber++;
 				}
@@ -75,7 +74,7 @@ public class EnemySpawner : MonoBehaviour {
 		}
 	}
 
-	IEnumerator delayNextWave(float inXSeconds, GameObject indicator, GameObject enemy, Vector3 position){
+	IEnumerator delayEnemySpawn(float inXSeconds, GameObject indicator, GameObject enemy, Vector3 position){
 		yield return new WaitForSeconds(inXSeconds);
 		Destroy (indicator);
 		Instantiate (enemy, position, Quaternion.identity);
