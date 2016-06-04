@@ -196,7 +196,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 149880, guid: 20557b653073f3b4ba87c32129676a8f, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458938, guid: 20557b653073f3b4ba87c32129676a8f, type: 2}
+      propertyPath: patrolSpeed
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 20557b653073f3b4ba87c32129676a8f, type: 2}

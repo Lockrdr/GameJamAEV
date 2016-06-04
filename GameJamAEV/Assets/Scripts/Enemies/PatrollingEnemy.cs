@@ -6,11 +6,14 @@ public class PatrollingEnemy : Enemy {
     [Header("Patrolling variables")]
     public Transform waypoint1;
     public Transform waypoint2;
+
+    public float patrolSpeed = 2f;
+
     private Vector3 mDir;
-    public Transform currentWaypoint;
+    public Vector3 newPostionTransform;
 
 	void Start () {
-        currentWaypoint = waypoint2;	
+        newPostionTransform = waypoint2.localPosition;	
 	}
 
 
@@ -21,20 +24,27 @@ public class PatrollingEnemy : Enemy {
             attackPlayer();
         }
         m_timeSinceLastAttack -= Time.deltaTime;
-        
-        //mDir = newPostionTransform - transform.position;
-        //mDir.Normalize();
-        //mDir.x = 0;
-        //transform.position += m_elevatorSpeed * Time.deltaTime * mDir;
 
-        ////Debug.Log(Mathf.Abs(Vector3.Distance(transform.position, newPostionTransform)));
-        //if (elevatorMoving && Mathf.Abs(Vector3.Distance(transform.position, newPostionTransform)) < Mathf.Abs(0.01f))
-        //{
+        mDir = newPostionTransform - transform.localPosition;
+        mDir.Normalize();
+        mDir.z = 0;
+        transform.localPosition += patrolSpeed * Time.deltaTime * mDir;
 
-        //    Debug.Log("llege a destino");
+        //Debug.Log(Mathf.Abs(Vector3.Distance(transform.position, newPostionTransform)));
+        if (Mathf.Abs(Vector3.Distance(transform.localPosition, newPostionTransform)) < Mathf.Abs(0.1f))
+        {
 
-        //    elevatorMoving = false;
-        //    StartCoroutine(nextTarget());
-        //}
+            //Debug.Log("llege a destino");
+            changeDirection();
+            //StartCoroutine(nextTarget());
+        }
+    }
+
+    void changeDirection()
+    {
+        if (newPostionTransform == waypoint2.localPosition)
+            newPostionTransform = waypoint1.localPosition;
+        else
+            newPostionTransform = waypoint2.localPosition;
     }
 }

@@ -18,7 +18,7 @@ public class PlayerCombat : MonoBehaviour {
                 m_playerHealth = 0;
 
             GameManager.getInstance().changePlayerState(GameStates.PlayerState.Dead);
-            Debug.Log("Jugador con menos de 0 de vida. Estado Dead");
+            //Debug.Log("Jugador con menos de 0 de vida. Estado Dead");
 
         }
         GUIManager.getInstance().updateHP(m_playerHealth);
@@ -41,7 +41,7 @@ public class PlayerCombat : MonoBehaviour {
         {
             GameManager.getInstance().changePlayerState(GameStates.PlayerState.Alive);
 
-            Debug.Log("Jugador con mas de 0 de vida. Estado Alive");
+            //Debug.Log("Jugador con mas de 0 de vida. Estado Alive");
         }
         GUIManager.getInstance().updateHP(m_playerHealth);
         updateSprite();
