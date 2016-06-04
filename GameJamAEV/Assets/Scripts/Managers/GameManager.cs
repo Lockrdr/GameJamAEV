@@ -28,7 +28,10 @@ public class GameManager : MonoBehaviour {
     {
         m_playerState = state;
 
-
+        if (state == GameStates.PlayerState.Resurrected)
+        {
+            endGame();
+        }
     }
 
     public void checkState(float playerHp)
@@ -44,6 +47,7 @@ public class GameManager : MonoBehaviour {
 
 
 	void Start () {
+        Time.timeScale = 1;
 
 		audioSource = gameObject.GetComponent<AudioSource> ();
         if (m_instance == null)
@@ -63,11 +67,11 @@ public class GameManager : MonoBehaviour {
 			m_WaveNumber++;
 			GUIManager.getInstance ().updateWaveNumber (m_WaveNumber);
 		}
-
-
-
 	}
 
-
-	
+	void endGame()
+    {
+        Time.timeScale = 0;
+        GUIManager.getInstance().getEndScreen().SetActive(true);
+    }
 }
