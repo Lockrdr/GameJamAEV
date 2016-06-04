@@ -414,7 +414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shoot: {fileID: 186318, guid: 343c4b262b5528445b86454db9c4bb0b, type: 2}
-  shootDamage: 5
+  shootDamage: 7
   shootSpeed: 3
   audioSource: {fileID: 0}
   m_attackingCooldown: 0.5
@@ -455,7 +455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be5e7ef33e779fa4d924ad765e5ccb9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_playerSpeed: 4
+  m_playerSpeed: 6
 --- !u!212 &21201844
 SpriteRenderer:
   m_ObjectHideFlags: 1
