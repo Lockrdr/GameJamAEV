@@ -53,7 +53,7 @@ public class EnemySpawner : MonoBehaviour {
 
 			spawnEnemy = Random.Range (0, typeOfEnemiesInThisWave);
  
-			if (spawnEnemy == 0) {
+			if (spawnEnemy == 0 || spawnEnemy == 3 || spawnEnemy == 4) {
 				spawnPosition = Random.Range (0, spawnPoints.Length);
 				if (positionsOcupated [spawnPosition] != 1) {
 					GameObject indicatorAux = (GameObject)Instantiate (indicatorImage, spawnPoints [spawnPosition].transform.position, Quaternion.identity);
@@ -61,7 +61,7 @@ public class EnemySpawner : MonoBehaviour {
 					positionsOcupated [spawnPosition] = 1;
 					spawnedNumber++;
 				}
-			} else if (spawnEnemy == 1 || spawnEnemy == 2) {
+			} else if (spawnEnemy == 1 || spawnEnemy == 2 ) {
 				spawnPosition = Random.Range (8, 11); 
 				if (positionsOcupated [spawnPosition] != 1) {
 					GameObject indicatorAux = (GameObject)Instantiate (indicatorImage, spawnPoints [spawnPosition].transform.position, Quaternion.identity);
