@@ -13,11 +13,7 @@ public class EnemySpawner : MonoBehaviour {
 	private int[] enemiesToSpawn, typeOfEnemiesToSpawn;
 	int enemiesInThisWave, typeOfEnemiesInThisWave;
 
-	// Use this for initialization
-	void Start () {
 
-	}
-	
 	// Update is called once per frame
 	public void spawnWave(int wave){
 
