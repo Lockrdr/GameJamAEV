@@ -516,6 +516,8 @@ MonoBehaviour:
   deathText:
   - Now you have to clean your room
   - And tomorrow is monday
+  - But you still have to pay the bills
+  - Fuck you!
 --- !u!114 &11467936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -740,7 +742,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 3a55cc792ff5b5e459c9996747837cdf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4ce0acf33c5178b478d6dea76a1b9733, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
