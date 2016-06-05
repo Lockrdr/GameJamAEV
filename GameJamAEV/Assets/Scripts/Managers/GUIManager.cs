@@ -88,6 +88,16 @@ public class GUIManager : MonoBehaviour {
         getReadyGO.SetActive(false);
     }
 
+    public void activeGetReadyText()
+    {
+        if (getReadyGO == null)
+        {
+            getReadyGO = transform.Find("UI/GetReady").gameObject;
+        }
+
+        getReadyGO.SetActive(true);
+    }
+
 
     void setButtonAutomatically()
     {
