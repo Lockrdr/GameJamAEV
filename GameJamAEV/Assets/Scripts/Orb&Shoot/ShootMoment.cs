@@ -15,9 +15,13 @@ public class ShootMoment : MonoBehaviour {
 		shootDirection = Input.mousePosition;
 		shootDirection.z = 0.0f;
 		shootDirection = Camera.main.ScreenToWorldPoint (shootDirection);
+        shootDirection.z = 0.0f;
 		shootDirection = Vector3.Normalize(shootDirection - transform.position);
+        shootDirection.z = 0.0f;
+        
+        Debug.Log(shootDirection);
 
-		rb.AddForce (shootDirection*1000*shootSpeed);
+		rb.AddForce (shootDirection*500*shootSpeed);
 	}
 
     void OnCollisionEnter2D(Collision2D coll)
