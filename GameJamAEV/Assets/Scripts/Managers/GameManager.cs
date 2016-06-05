@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour {
 	public float timeToSpawn = 30f;
 	public float lastSpawnTime;
 
+    private bool isFirstWave = true;
+
     public Texture2D newCursor;
     private GameObject WallFloors;
 
@@ -107,9 +109,18 @@ public class GameManager : MonoBehaviour {
 
 		if ((m_enemyNumberControler == 0 || Time.time - lastSpawnTime >= 30 ) && !watingNextWave)
         {
+            if(isFirstWave)
+            {
+                GUIManager.getInstance().activeGetReadyText();
+                isFirstWave = false;
+
+            }else
+            {
+                GUIManager.getInstance().activeNexWaveText();
+
+            }
             watingNextWave = true;
 			lastSpawnTime = Time.time + timeBetweenWaves;
-            GUIManager.getInstance().activeNexWaveText();
             StartCoroutine(delayNextWave(timeBetweenWaves));
 		}
 	}
@@ -118,7 +129,6 @@ public class GameManager : MonoBehaviour {
     {
         yield return new WaitForSeconds(inXSeconds);
         GetComponent<EnemySpawner>().spawnWave(m_WaveNumber);
-        GUIManager.getInstance().deactiveGetReadyText();
     }
 
     IEnumerator delayNextWave(float inXSeconds)
@@ -135,6 +145,8 @@ public class GameManager : MonoBehaviour {
         GUIManager.getInstance().updateWaveNumber(m_WaveNumber);
         watingNextWave = false;
         GUIManager.getInstance().deactiveNexWaveText();
+        GUIManager.getInstance().deactiveGetReadyText();
+
 
     }
 
