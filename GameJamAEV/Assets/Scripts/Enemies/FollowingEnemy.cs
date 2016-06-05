@@ -25,7 +25,7 @@ public class FollowingEnemy : Enemy {
 
         updateAnimation(mDir);
 
-        Debug.Log(mDir);
+        //Debug.Log(mDir);
 
         transform.localPosition += movingSpeed * Time.deltaTime * mDir;
 
@@ -35,45 +35,37 @@ public class FollowingEnemy : Enemy {
     {
         if (mDir.x == 1 && mDir.y == 0)
         {
-            GetComponent<Animator>().Play("LeftRight");
-            GetComponent<SpriteRenderer>().flipX = true;
+            GetComponent<Animator>().Play("Right");
         }
         else if (mDir.x == 0 && mDir.y == -1)
         {
             GetComponent<Animator>().Play("Down");
-            GetComponent<SpriteRenderer>().flipX = false;
         }
         else if (mDir.x == -1 && mDir.y == 0)
         {
-            GetComponent<Animator>().Play("LeftRight");
-            GetComponent<SpriteRenderer>().flipX = false;
+            GetComponent<Animator>().Play("Left");
         }
         else if (mDir.x == 0 && mDir.y == 1)
         {
             GetComponent<Animator>().Play("Up");
-            GetComponent<SpriteRenderer>().flipX = false;
 
         }else if ((mDir.x > 0.5f && mDir.x < 0 && mDir.y >= 0.5f && mDir.y < 1) || (mDir.x > -0.5f && mDir.x < 0 && mDir.y > 0.5f && mDir.y < 1))
         {
             GetComponent<Animator>().Play("Up");
-            GetComponent<SpriteRenderer>().flipX = false;
         }
         else if ((mDir.x < -0.5f && mDir.x > -1 && mDir.y >= 0 && mDir.y < 0.5f) || (mDir.x <= -0.5f && mDir.x > 1 && mDir.y >= -0.5f && mDir.y < 0))
         {
             //Left 
-            GetComponent<Animator>().Play("LeftRight");
-            GetComponent<SpriteRenderer>().flipX = false;
+            GetComponent<Animator>().Play("Left");
         }
         else if ((mDir.x > -0.5f && mDir.x < 0 && mDir.y > -1 && mDir.y < -0.5f) || (mDir.x > 0f && mDir.x < 0.5f && mDir.y > -1f && mDir.y < -0.5f))
         {
             GetComponent<Animator>().Play("Down");
-            GetComponent<SpriteRenderer>().flipX = false;
         }
         else
         {
             //Right
-            GetComponent<Animator>().Play("LeftRight");
-            GetComponent<SpriteRenderer>().flipX = true;
+            GetComponent<Animator>().Play("Right");
         }
 
     }
