@@ -17,7 +17,9 @@ public class PatrollingEnemy : Enemy {
 		base.Start ();
         GetComponent<SpriteRenderer>().flipX = true;
         newPostionTransform = waypoint2.localPosition;
-        GetComponent<Animator>().Play("UpMoving");
+        
+        if(isVertical)
+            GetComponent<Animator>().Play("UpMoving");
 
 	}
 
