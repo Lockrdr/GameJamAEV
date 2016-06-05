@@ -239,9 +239,9 @@ MonoBehaviour:
   m_playerDetected: 0
   projectile: {fileID: 153618, guid: f9410d6cea06c9a4583d86043712e4b7, type: 2}
   m_enemyHP: 20
-  m_attackingCooldown: 0.33
+  m_attackingCooldown: 0.5
   shootDamage: 25
-  shootSpeed: 0.7
+  shootSpeed: 0.6
   audioSource: {fileID: 0}
 --- !u!114 &11436526
 MonoBehaviour:
@@ -312,7 +312,7 @@ Prefab:
       objectReference: {fileID: 153618, guid: f9410d6cea06c9a4583d86043712e4b7, type: 2}
     - target: {fileID: 0}
       propertyPath: shootSpeed
-      value: 0.7
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Sprite
@@ -349,7 +349,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_attackingCooldown
-      value: 0.33
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: panLevelCustomCurve.m_RotationOrder

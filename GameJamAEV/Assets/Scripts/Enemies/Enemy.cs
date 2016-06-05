@@ -56,7 +56,9 @@ public class Enemy : MonoBehaviour {
 		audioSource.clip = SoundManager.getInstance ().enemyDeath ();
 		audioSource.Play ();
 		GameManager.getInstance ().m_enemyNumberControler--;
-        GetComponent<BoxCollider2D>().enabled = false; 
+        GetComponent<BoxCollider2D>().enabled = false;
+        GetComponent<SpriteRenderer>().enabled = false;
+
 		StartCoroutine (delayEnemyDeath());
     }
 
