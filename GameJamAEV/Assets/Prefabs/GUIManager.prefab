@@ -120,6 +120,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &144994
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22475228}
+  - 222: {fileID: 22260676}
+  - 114: {fileID: 11459482}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &153600
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,6 +469,39 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &11459482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.19607843, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: ca8c8fc421cc58444b5d2c6a5da3ca1b, type: 3}
+    m_FontSize: 35
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 45
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: And tomorrow is monday
 --- !u!114 &11466130
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -463,6 +513,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0443438177314f44398521d855f63ec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathText:
+  - Now you have to clean your room
+  - And tomorrow is monday
 --- !u!114 &11467936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -725,6 +778,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124992}
+--- !u!222 &22260676
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144994}
 --- !u!222 &22262454
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -909,6 +968,23 @@ RectTransform:
   m_AnchoredPosition: {x: 34, y: 40}
   m_SizeDelta: {x: 348, y: 94}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &22475228
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144994}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 22496286}
+  m_RootOrder: 3
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 117}
+  m_SizeDelta: {x: 700, y: 84}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22480050
 RectTransform:
   m_ObjectHideFlags: 1
@@ -956,6 +1032,7 @@ RectTransform:
   - {fileID: 22488382}
   - {fileID: 22417174}
   - {fileID: 22468806}
+  - {fileID: 22475228}
   m_Father: {fileID: 425990}
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
