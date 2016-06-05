@@ -788,6 +788,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b03d8645072db7147bacfdc60274b870, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1509778672
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 436758, guid: d636994cc9bdb6a48b9aa72e1a68bc87, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 436758, guid: d636994cc9bdb6a48b9aa72e1a68bc87, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 436758, guid: d636994cc9bdb6a48b9aa72e1a68bc87, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 436758, guid: d636994cc9bdb6a48b9aa72e1a68bc87, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 436758, guid: d636994cc9bdb6a48b9aa72e1a68bc87, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 436758, guid: d636994cc9bdb6a48b9aa72e1a68bc87, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 436758, guid: d636994cc9bdb6a48b9aa72e1a68bc87, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 436758, guid: d636994cc9bdb6a48b9aa72e1a68bc87, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d636994cc9bdb6a48b9aa72e1a68bc87, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1569367046
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,53 +964,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!1001 &1842501919
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 437500, guid: 4ff21977961b58a4cb74411a98686e68, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 437500, guid: 4ff21977961b58a4cb74411a98686e68, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 437500, guid: 4ff21977961b58a4cb74411a98686e68, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 437500, guid: 4ff21977961b58a4cb74411a98686e68, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 437500, guid: 4ff21977961b58a4cb74411a98686e68, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 437500, guid: 4ff21977961b58a4cb74411a98686e68, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 437500, guid: 4ff21977961b58a4cb74411a98686e68, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 437500, guid: 4ff21977961b58a4cb74411a98686e68, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 4ff21977961b58a4cb74411a98686e68, type: 2}
-  m_IsPrefabParent: 0
---- !u!20 &1842501920 stripped
-Camera:
-  m_PrefabParentObject: {fileID: 2029408, guid: 4ff21977961b58a4cb74411a98686e68,
-    type: 2}
-  m_PrefabInternal: {fileID: 1842501919}
 --- !u!1 &1851425081
 GameObject:
   m_ObjectHideFlags: 0
@@ -1062,7 +1057,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 2
   m_RenderMode: 1
-  m_Camera: {fileID: 1842501920}
+  m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
