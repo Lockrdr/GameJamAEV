@@ -45,5 +45,9 @@ public class SoundManager : MonoBehaviour {
 	public AudioClip healthToThePlayer(){
 		return audioClips [6];
 	}
+
+	public AudioClip damageToEnemy(){
+		return audioClips [7];
+	}
 		
 }

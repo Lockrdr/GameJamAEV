@@ -14,7 +14,6 @@ public class EnemyProjectile : MonoBehaviour {
     {
         rb = GetComponent<Rigidbody2D>();
 
- 
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         shootDirection = playerTransform.position;
         shootDirection = Vector3.Normalize(shootDirection - transform.position);

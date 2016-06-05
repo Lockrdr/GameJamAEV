@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour {
 				die();
             }
 
-			//CAmbiar color
+			//CAmbiar color y suena
 			Color normalColor = transform.GetComponent<SpriteRenderer>().color;
 			Color tempColor = normalColor;
 			tempColor.b *= 0.7f;
@@ -46,6 +46,8 @@ public class Enemy : MonoBehaviour {
 			transform.GetComponent<SpriteRenderer> ().color = tempColor;
 			StartCoroutine (colorController(normalColor));
 
+			audioSource.clip = SoundManager.getInstance ().damageToEnemy ();
+			audioSource.Play();
 			//-------------
 
         }
