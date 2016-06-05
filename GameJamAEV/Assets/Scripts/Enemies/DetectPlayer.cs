@@ -22,6 +22,4 @@ public class DetectPlayer : MonoBehaviour {
         }
     }
 
-
-   
 }

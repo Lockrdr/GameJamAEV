@@ -273,7 +273,7 @@ Prefab:
     - target: {fileID: 11498834, guid: 57b701928f4df2e43a303f06ebb3111d, type: 2}
       propertyPath: newFloor
       value: 
-      objectReference: {fileID: 21300000, guid: 813ee244177876c4997975fcff23f349,
+      objectReference: {fileID: 21300000, guid: 6d2aa6ab1f06ed946962400b9e9de165,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57b701928f4df2e43a303f06ebb3111d, type: 2}

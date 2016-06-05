@@ -23,7 +23,7 @@ public class OrbShoot : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//Button "Fire": ProjectSettings -> Input
-		if (Input.GetButton("Fire")&& m_timeSinceLastAttack < 0) {
+		if (Input.GetButton("Fire") && m_timeSinceLastAttack < 0) {
             m_timeSinceLastAttack = m_attackingCooldown;
 
 			audioSource.clip = SoundManager.getInstance ().playerShoot ();

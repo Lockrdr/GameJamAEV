@@ -45,6 +45,7 @@ public class Enemy : MonoBehaviour {
 		transform.GetComponent<SpriteRenderer> ().color = tempColor;
 		StartCoroutine (colorController(normalColor));
 
+
 		audioSource.clip = SoundManager.getInstance ().damageToEnemy ();
 		audioSource.Play();
 		//-------------
@@ -58,6 +59,9 @@ public class Enemy : MonoBehaviour {
 		GameManager.getInstance ().m_enemyNumberControler--;
         GetComponent<BoxCollider2D>().enabled = false;
         GetComponent<SpriteRenderer>().enabled = false;
+        transform.Find("DetectionRange").gameObject.SetActive(false);
+        m_playerDetected = false;
+        
 
 		StartCoroutine (delayEnemyDeath());
     }
@@ -89,6 +93,12 @@ public class Enemy : MonoBehaviour {
     virtual public void playerDetected()
     {
         m_playerDetected = true;
+        //Debug.Log("Te veo");
+    }
+
+    virtual public void playerNotDetected()
+    {
+        m_playerDetected = false;
         //Debug.Log("Te veo");
     }
 
