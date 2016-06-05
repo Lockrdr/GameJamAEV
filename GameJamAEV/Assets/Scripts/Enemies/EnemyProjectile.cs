@@ -9,12 +9,15 @@ public class EnemyProjectile : MonoBehaviour {
     private float shootDamage = 5f;
 	public int shootType = 0;
     private Transform playerTransform;
+	public AudioSource audioSource;
 
     // Use this for initialization
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+		audioSource = gameObject.GetComponent<AudioSource> ();
+		audioSource.clip = SoundManager.getInstance ().enemyShoot();
+		audioSource.Play ();
         //playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         
 		if(shootType == 0){
