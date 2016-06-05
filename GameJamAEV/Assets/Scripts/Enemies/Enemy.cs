@@ -29,29 +29,26 @@ public class Enemy : MonoBehaviour {
 
     virtual public void receiveDamage(float damage)
     {
-        if(GameManager.getInstance().m_playerState == GameStates.PlayerState.Dead)
+
+        m_enemyHP -= damage;
+
+        if (m_enemyHP <= 0)
         {
-            m_enemyHP -= damage;
-
-            if (m_enemyHP <= 0)
-            {
-				die();
-            }
-
-			//CAmbiar color y suena
-			Color normalColor = transform.GetComponent<SpriteRenderer>().color;
-			Color tempColor = normalColor;
-			tempColor.b *= 0.7f;
-			tempColor.g *= 0.7f;
-			transform.GetComponent<SpriteRenderer> ().color = tempColor;
-			StartCoroutine (colorController(normalColor));
-
-			audioSource.clip = SoundManager.getInstance ().damageToEnemy ();
-			audioSource.Play();
-			//-------------
-
+			die();
         }
-        
+
+		//CAmbiar color y suena
+		Color normalColor = transform.GetComponent<SpriteRenderer>().color;
+		Color tempColor = normalColor;
+		tempColor.b *= 0.7f;
+		tempColor.g *= 0.7f;
+		transform.GetComponent<SpriteRenderer> ().color = tempColor;
+		StartCoroutine (colorController(normalColor));
+
+		audioSource.clip = SoundManager.getInstance ().damageToEnemy ();
+		audioSource.Play();
+		//-------------
+ 
     }
 
     virtual internal void die()

@@ -296,6 +296,14 @@ Prefab:
       propertyPath: hpToBecomeAlive
       value: 70
       objectReference: {fileID: 0}
+    - target: {fileID: 11490738, guid: 57b701928f4df2e43a303f06ebb3111d, type: 2}
+      propertyPath: enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 101742, guid: fa9d16ebf3137384d9b402d541cbccc8, type: 2}
+    - target: {fileID: 11490738, guid: 57b701928f4df2e43a303f06ebb3111d, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57b701928f4df2e43a303f06ebb3111d, type: 2}
   m_IsPrefabParent: 0
