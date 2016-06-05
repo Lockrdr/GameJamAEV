@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba8e3485398c7d48b2a26a52b833dd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_WaveNumber: 1
+  m_WaveNumber: 0
   timeBetweenWaves: 3
   m_enemyNumberControler: 0
   hpToBecomeAlive: 70

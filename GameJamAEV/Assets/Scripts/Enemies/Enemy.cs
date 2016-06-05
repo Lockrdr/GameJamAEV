@@ -56,7 +56,7 @@ public class Enemy : MonoBehaviour {
 		audioSource.clip = SoundManager.getInstance ().enemyDeath ();
 		audioSource.Play ();
 		GameManager.getInstance ().m_enemyNumberControler--;
-		Destroy(gameObject);
+		StartCoroutine (delayEnemyDeath());
     }
 
     void Update()
@@ -75,8 +75,7 @@ public class Enemy : MonoBehaviour {
        if (m_timeSinceLastAttack < 0)
         {
             //Debug.Log("Te ataco");
-			audioSource.clip = SoundManager.getInstance ().enemyShoot();
-			audioSource.Play ();
+
             GameObject shootInstance = (GameObject)Instantiate(projectile, transform.position, Quaternion.identity);
             shootInstance.GetComponent<EnemyProjectile>().setDamage(shootDamage);
             shootInstance.GetComponent<EnemyProjectile>().setSpeed(shootSpeed);
@@ -100,6 +99,11 @@ public class Enemy : MonoBehaviour {
 	IEnumerator colorController(Color oldColor){
 		yield return new WaitForSeconds (0.5f);
 		transform.GetComponent<SpriteRenderer> ().color = oldColor;
+	}
+
+	IEnumerator delayEnemyDeath(){
+		yield return new WaitForSeconds(0.35f);
+		Destroy(gameObject);
 	}
 
 }

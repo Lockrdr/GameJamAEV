@@ -9,8 +9,10 @@ public class SubstractOnEnter : MonoBehaviour {
     {
         if (coll.CompareTag("Player"))
         {
-            coll.GetComponent<PlayerCombat>().substractLife(amountOfLife);
-			Destroy (gameObject);
+			if (coll.GetComponent<PlayerCombat> ().m_playerHealth > 0) {
+				coll.GetComponent<PlayerCombat> ().substractLife (amountOfLife);
+				Destroy (gameObject);
+			}
         }
     }
 

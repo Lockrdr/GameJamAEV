@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour {
     
     private GameObject playerOrb;
     
-    public int m_WaveNumber = 1;
+    public int m_WaveNumber = 0;
     public float timeBetweenWaves = 3f;
 	
     public int m_enemyNumberControler = 0;
