@@ -58,10 +58,10 @@ public class GameManager : MonoBehaviour {
 
         }else if(state == GameStates.PlayerState.Alive)
         {
-            playerOrb.SetActive(false);
+            //playerOrb.SetActive(false);
 
         }else if(state == GameStates.PlayerState.Dead){        
-            playerOrb.SetActive(true);        
+            //playerOrb.SetActive(true);        
         }
     }
 
