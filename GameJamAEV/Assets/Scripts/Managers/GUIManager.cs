@@ -29,10 +29,19 @@ public class GUIManager : MonoBehaviour {
     private Button botonPlayAgain;
     private Button botonMainMenu;
 
+	public string[] deathText = 	{"Now you have to clean your room",
+									 "And tomorrow is monday"};
+
     //private GameObject endScreen;
 
 
     //private bool paused = false;
+
+	void OnEnable(){
+		
+		transform.Find ("EndScreen/Text").GetComponent<Text> ().text = returnText();
+
+	}
 
     void Awake()
     {
@@ -160,4 +169,10 @@ public class GUIManager : MonoBehaviour {
     {
         return transform.Find("EndScreen").gameObject;
     }
+
+	public string returnText(){
+	
+		return deathText[Random.Range(0,deathText.Length)];
+
+	}
 }

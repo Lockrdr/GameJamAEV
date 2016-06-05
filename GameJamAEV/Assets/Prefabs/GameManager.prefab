@@ -177,6 +177,7 @@ MonoBehaviour:
   timeToSpawn: 30
   lastSpawnTime: 0
   newCursor: {fileID: 2800000, guid: 0d012d4b63a852c439d2acb1f24435c4, type: 3}
+  textDeath: {fileID: 0}
   audioSource: {fileID: 0}
   m_playerState: 0
 --- !u!1001 &100100000

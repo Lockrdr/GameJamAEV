@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
@@ -36,7 +37,6 @@ public class GameManager : MonoBehaviour {
 
     public Texture2D newCursor;
     private GameObject WallFloors;
-
 
 	public AudioSource audioSource;
 
@@ -154,6 +154,7 @@ public class GameManager : MonoBehaviour {
     {
         WallFloors.GetComponent<CameraShakeEffects>().CancelShake();
         Time.timeScale = 0;
+
         GUIManager.getInstance().getEndScreen().SetActive(true);
     }
 
