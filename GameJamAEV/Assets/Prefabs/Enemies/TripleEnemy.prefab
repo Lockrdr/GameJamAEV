@@ -261,9 +261,9 @@ MonoBehaviour:
   m_playerDetected: 0
   projectile: {fileID: 153618, guid: f9410d6cea06c9a4583d86043712e4b7, type: 2}
   m_enemyHP: 20
-  m_attackingCooldown: 0.33
+  m_attackingCooldown: 0.5
   shootDamage: 25
-  shootSpeed: 1
+  shootSpeed: 0.9
   audioSource: {fileID: 0}
 --- !u!212 &21205662
 SpriteRenderer:
@@ -305,6 +305,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_enemyHP
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_attackingCooldown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shootSpeed
+      value: 0.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
