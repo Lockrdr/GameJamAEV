@@ -13,6 +13,7 @@ public class PatrollingEnemy : Enemy {
     private Vector3 mDir;
     public Vector3 newPostionTransform;
 
+
 	void Start () {
 		base.Start ();
         GetComponent<SpriteRenderer>().flipX = true;
@@ -28,7 +29,9 @@ public class PatrollingEnemy : Enemy {
     {
         if (m_playerDetected)
         {
-            attackPlayer();
+			if (Time.time - spawnTime > startShootTime) {
+				attackPlayer ();
+			}
         }
         m_timeSinceLastAttack -= Time.deltaTime;
 

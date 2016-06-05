@@ -21,10 +21,14 @@ public class Enemy : MonoBehaviour {
 
 	public AudioSource audioSource;
 
+	internal float spawnTime, startShootTime;
 
 
 	virtual public void Start(){
 		audioSource = gameObject.GetComponent<AudioSource> ();
+
+		spawnTime = Time.time;
+		startShootTime = Random.Range (0f,1f);
 	}
 
     virtual public void receiveDamage(float damage)
@@ -69,9 +73,10 @@ public class Enemy : MonoBehaviour {
     void Update()
     {
 	
-        if(m_playerDetected)
-        {
-            attackPlayer();
+		if (m_playerDetected) {
+			if (Time.time - spawnTime > startShootTime) {
+				attackPlayer ();
+			}
         }
 
         m_timeSinceLastAttack -= Time.deltaTime;

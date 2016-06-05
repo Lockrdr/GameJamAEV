@@ -7,7 +7,9 @@ public class StaticEnemy : Enemy {
     {
         if (m_playerDetected)
         {
-            attackPlayer();
+			if (Time.time - spawnTime > startShootTime) {
+				attackPlayer ();
+			}
         }
 
         m_timeSinceLastAttack -= Time.deltaTime;

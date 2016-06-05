@@ -2,20 +2,22 @@
 using System.Collections;
 
 public class TripleEnemy : Enemy {
-	
+
+
 	void Update()
 	{
 		if (m_playerDetected)
 		{
-			attackPlayer();
+			if (Time.time - spawnTime > startShootTime) {
+				attackPlayer ();
+			}
 		}
 
 		m_timeSinceLastAttack -= Time.deltaTime;
 	}
 
 	protected override void attackPlayer(){
-		if (m_timeSinceLastAttack < 0)
-		{
+		if (m_timeSinceLastAttack < 0){
 			//Debug.Log("Te ataco");
 			audioSource.clip = SoundManager.getInstance ().enemyShoot();
 			audioSource.Play ();
