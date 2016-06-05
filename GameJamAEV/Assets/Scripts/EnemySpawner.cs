@@ -27,7 +27,9 @@ public class EnemySpawner : MonoBehaviour {
 							 6,6,6,6,7,7,7,7,7,7, //Rondas 20 a 29
 							 7,8}; //Rondas 30 a infinito
 		typeOfEnemiesToSpawn = new int[] 
-							{1,1,1,1,2,2,2,2,3}; //Rondas 1 a infinito
+							{1,1,1,1,2,2,2,2,3, //Rondas 1 a 9
+							 3,3,3,4,4,4,4,5,5,5, //Rondas 10 a 19
+							 5}; //Rondas 20 a infinito
 
 		if (enemiesToSpawn.Length < wave) {
 			enemiesInThisWave = enemiesToSpawn [enemiesToSpawn.Length-1];

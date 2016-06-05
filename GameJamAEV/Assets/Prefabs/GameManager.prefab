@@ -111,7 +111,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 119360}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7917aad35cde514bb34c2786f2cfa70, type: 3}
   m_Name: 
@@ -133,6 +133,8 @@ MonoBehaviour:
   - {fileID: 101742, guid: fa9d16ebf3137384d9b402d541cbccc8, type: 2}
   - {fileID: 149880, guid: 20557b653073f3b4ba87c32129676a8f, type: 2}
   - {fileID: 123002, guid: 7cc9b623e0d856742ba6a90b96c39563, type: 2}
+  - {fileID: 173874, guid: 9f43395d6a0ce7546bc534fc1d5cc44a, type: 2}
+  - {fileID: 114728, guid: 9d03f5371c9d307468fd8ecc122820af, type: 2}
   indicatorImage: {fileID: 140070, guid: 457a3e5ec11a7cd4ba666fef20181aa0, type: 2}
   waitEnemies: 1
 --- !u!114 &11495642
