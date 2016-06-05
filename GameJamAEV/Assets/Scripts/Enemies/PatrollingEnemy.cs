@@ -14,6 +14,7 @@ public class PatrollingEnemy : Enemy {
 
 	void Start () {
 		base.Start ();
+        GetComponent<SpriteRenderer>().flipX = true;
         newPostionTransform = waypoint2.localPosition;	
 	}
 
@@ -44,8 +45,16 @@ public class PatrollingEnemy : Enemy {
     void changeDirection()
     {
         if (newPostionTransform == waypoint2.localPosition)
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
             newPostionTransform = waypoint1.localPosition;
+
+        }
         else
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
             newPostionTransform = waypoint2.localPosition;
+
+        }
     }
 }
