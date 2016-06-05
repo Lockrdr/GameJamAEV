@@ -22,10 +22,13 @@ public class EnemySpawner : MonoBehaviour {
 							 4,4,4,5,5,5,5,5,6,6, //Rondas 10 a 19
 							 6,6,6,6,7,7,7,7,7,7, //Rondas 20 a 29
 							 7,8}; //Rondas 30 a infinito
-		typeOfEnemiesToSpawn = new int[] 
-							{1,1,1,1,2,2,2,2,3, //Rondas 1 a 9
+		typeOfEnemiesToSpawn = new int[] {
+                            1,1,2,2,3,3,4,4,5,5
+                                };
+                            
+							/*{1,1,1,1,2,2,2,2,3, //Rondas 1 a 9
 							 3,3,3,4,4,4,4,5,5,5, //Rondas 10 a 19
-							 5}; //Rondas 20 a infinito
+							 5}; //Rondas 20 a infinito*/
 
 		if (enemiesToSpawn.Length < wave) {
 			enemiesInThisWave = enemiesToSpawn [enemiesToSpawn.Length-1];
@@ -52,8 +55,9 @@ public class EnemySpawner : MonoBehaviour {
 		while(spawnedNumber < enemiesInThisWave){
 
 			spawnEnemy = Random.Range (0, typeOfEnemiesInThisWave);
- 
-			if (spawnEnemy == 0 || spawnEnemy == 3 || spawnEnemy == 4) {
+
+            if (spawnEnemy == 0 || spawnEnemy == 3 || spawnEnemy == 4)
+            {
 				spawnPosition = Random.Range (0, spawnPoints.Length);
 				if (positionsOcupated [spawnPosition] != 1) {
 					GameObject indicatorAux = (GameObject)Instantiate (indicatorImage, spawnPoints [spawnPosition].transform.position, Quaternion.identity);
@@ -61,7 +65,7 @@ public class EnemySpawner : MonoBehaviour {
 					positionsOcupated [spawnPosition] = 1;
 					spawnedNumber++;
 				}
-			} else if (spawnEnemy == 1 || spawnEnemy == 2 ) {
+			} else if (spawnEnemy == 1 || spawnEnemy == 2) {
 				spawnPosition = Random.Range (8, 11); 
 				if (positionsOcupated [spawnPosition] != 1) {
 					GameObject indicatorAux = (GameObject)Instantiate (indicatorImage, spawnPoints [spawnPosition].transform.position, Quaternion.identity);
