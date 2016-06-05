@@ -40,21 +40,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClips:
-  - {fileID: 8300000, guid: 4fb3749f2a5159640989247c5293d7a5, type: 3}
+  - {fileID: 8300000, guid: b919969b50b18374281037fd939f9f5b, type: 3}
   - {fileID: 8300000, guid: 29b87eca4d1d34642b5adb95f7e2d238, type: 3}
   - {fileID: 8300000, guid: 108b9b9ab1cbca143b246895ef6caed6, type: 3}
   - {fileID: 8300000, guid: 0754a743f7870e1458caf78cf463d0d8, type: 3}
   - {fileID: 8300000, guid: dbe846c0143c3eb49a3aae4caf101be6, type: 3}
   - {fileID: 8300000, guid: 3c584d0e5f7ab7442b8d9e49be0b1d18, type: 3}
   - {fileID: 8300000, guid: d8b1c9d6c16feca43ae54837da97fb21, type: 3}
-  - {fileID: 8300000, guid: 0ba06a5bd8250ef4a99a57abafa44897, type: 3}
+  - {fileID: 8300000, guid: 4fb3749f2a5159640989247c5293d7a5, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: audioClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: b919969b50b18374281037fd939f9f5b, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 138588}
