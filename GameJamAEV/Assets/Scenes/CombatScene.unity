@@ -220,28 +220,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 120624, guid: fea175bef40740d428cfeb9b5cbf6251, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 128862, guid: fea175bef40740d428cfeb9b5cbf6251, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 21279112, guid: fea175bef40740d428cfeb9b5cbf6251, type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 6e237217e899b56499b2dc91bead0a23,
-        type: 3}
-    - target: {fileID: 9516064, guid: fea175bef40740d428cfeb9b5cbf6251, type: 2}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 22100000, guid: 1310cb5830aa27a48a499ea50c926850,
-        type: 2}
-    - target: {fileID: 8295692, guid: fea175bef40740d428cfeb9b5cbf6251, type: 2}
-      propertyPath: m_Volume
-      value: 0.6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fea175bef40740d428cfeb9b5cbf6251, type: 2}
   m_IsPrefabParent: 0

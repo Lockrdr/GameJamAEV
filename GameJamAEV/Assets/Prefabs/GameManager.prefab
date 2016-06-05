@@ -167,7 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_WaveNumber: 1
   timeBetweenWaves: 3
-  m_enemyNumberControler: 2
+  m_enemyNumberControler: 0
   hpToBecomeAlive: 70
   HpForFullBody: 100
   HpForThreeQuarterBody: 75

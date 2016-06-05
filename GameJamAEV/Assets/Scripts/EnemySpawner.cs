@@ -37,7 +37,7 @@ public class EnemySpawner : MonoBehaviour {
 			enemiesInThisWave = enemiesToSpawn [wave - 1];
 		}
 
-		GameManager.getInstance().m_enemyNumberControler = enemiesInThisWave;
+		GameManager.getInstance().m_enemyNumberControler += enemiesInThisWave;
 
 		if (typeOfEnemiesToSpawn.Length < wave) {
 			typeOfEnemiesInThisWave = typeOfEnemiesToSpawn [typeOfEnemiesToSpawn.Length-1];

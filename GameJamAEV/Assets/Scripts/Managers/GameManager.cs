@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour {
     public int m_WaveNumber = 1;
     public float timeBetweenWaves = 3f;
 	
-    public int m_enemyNumberControler = 8;
+    public int m_enemyNumberControler = 0;
     private bool watingNextWave = false;
 
 
@@ -95,7 +95,7 @@ public class GameManager : MonoBehaviour {
         if (m_instance == null)
             m_instance = this;
 
-        StartCoroutine(delayFirstWave(timeBetweenWaves));
+ 
 
 		lastSpawnTime = Time.time;
 

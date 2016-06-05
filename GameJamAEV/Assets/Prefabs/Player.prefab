@@ -561,7 +561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shoot: {fileID: 186318, guid: 343c4b262b5528445b86454db9c4bb0b, type: 2}
-  shootDamage: 7
+  shootDamage: 10
   shootSpeed: 2
   audioSource: {fileID: 0}
   m_attackingCooldown: 0.33
