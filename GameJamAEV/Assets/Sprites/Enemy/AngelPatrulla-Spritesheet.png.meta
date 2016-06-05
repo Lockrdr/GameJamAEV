@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 81a39a62d92440a4db3852758da31897
-timeCreated: 1465123897
+timeCreated: 1465124542
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -9,6 +9,7 @@ TextureImporter:
     21300004: AngelPatrulla-Spritesheet_2
     21300006: AngelPatrulla-Spritesheet_3
     21300008: AngelPatrulla-Spritesheet_4
+    21300010: AngelPatrulla-Spritesheet_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -59,9 +60,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 40
-        y: 64
+        y: 96
         width: 39
-        height: 63
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -78,9 +79,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 168
-        y: 98
+        y: 96
         width: 40
-        height: 28
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,22 +113,23 @@ TextureImporter:
     - name: AngelPatrulla-Spritesheet_2
       rect:
         serializedVersion: 2
-        x: 169
+        x: 168
         y: 64
-        width: 37
-        height: 33
+        width: 40
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -9.5, y: 16.5}
-        - {x: -18.5, y: 6.5}
-        - {x: -18.5, y: -6.5}
-        - {x: -10.5, y: -16.5}
-        - {x: 8.5, y: -16.5}
-        - {x: 18.5, y: -5.5}
-        - {x: 18.5, y: 5.5}
-        - {x: 8.5, y: 16.5}
+      - - {x: -10, y: 16}
+        - {x: -20, y: 5}
+        - {x: -20, y: -3}
+        - {x: -19, y: -4}
+        - {x: -10, y: -16}
+        - {x: 7, y: -16}
+        - {x: 20, y: -3}
+        - {x: 20, y: 3}
+        - {x: 9, y: 16}
     - name: AngelPatrulla-Spritesheet_3
       rect:
         serializedVersion: 2
@@ -350,6 +352,26 @@ TextureImporter:
         - {x: 19.5, y: -24.5}
         - {x: 19.5, y: 30.5}
         - {x: 17.5, y: 31.5}
+    - name: AngelPatrulla-Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 64
+        width: 39
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.5, y: 16}
+        - {x: -17.5, y: 14}
+        - {x: -19.5, y: 7}
+        - {x: -19.5, y: -9}
+        - {x: -8.5, y: -16}
+        - {x: 8.5, y: -16}
+        - {x: 19.5, y: -9}
+        - {x: 19.5, y: 3}
+        - {x: 13.5, y: 16}
     outline: []
   spritePackingTag: 
   userData: 

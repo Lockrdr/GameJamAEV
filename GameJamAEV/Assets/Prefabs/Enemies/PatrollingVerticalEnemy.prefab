@@ -311,6 +311,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   waypoint1: {fileID: 486668}
   waypoint2: {fileID: 429348}
+  isVertical: 1
   patrolSpeed: 3
   newPostionTransform: {x: 0, y: 0, z: 0}
 --- !u!114 &11438688
@@ -371,7 +372,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: isVertical
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 123002}

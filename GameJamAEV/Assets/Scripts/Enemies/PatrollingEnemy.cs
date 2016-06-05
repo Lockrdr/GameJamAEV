@@ -7,6 +7,7 @@ public class PatrollingEnemy : Enemy {
     public Transform waypoint1;
     public Transform waypoint2;
 
+    public bool isVertical = false;
     public float patrolSpeed = 2f;
 
     private Vector3 mDir;
@@ -15,7 +16,9 @@ public class PatrollingEnemy : Enemy {
 	void Start () {
 		base.Start ();
         GetComponent<SpriteRenderer>().flipX = true;
-        newPostionTransform = waypoint2.localPosition;	
+        newPostionTransform = waypoint2.localPosition;
+        GetComponent<Animator>().Play("UpMoving");
+
 	}
 
 
@@ -46,13 +49,22 @@ public class PatrollingEnemy : Enemy {
     {
         if (newPostionTransform == waypoint2.localPosition)
         {
-            GetComponent<SpriteRenderer>().flipX = false;
+            if (!isVertical)
+                GetComponent<SpriteRenderer>().flipX = false;
+            else
+                GetComponent<Animator>().Play("DownMoving");
+
             newPostionTransform = waypoint1.localPosition;
 
         }
         else
         {
-            GetComponent<SpriteRenderer>().flipX = true;
+            if (!isVertical)
+                GetComponent<SpriteRenderer>().flipX = true;
+            else
+                GetComponent<Animator>().Play("UpMoving");
+                
+            
             newPostionTransform = waypoint2.localPosition;
 
         }
