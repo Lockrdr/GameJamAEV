@@ -4,9 +4,10 @@ using System.Collections;
 public class EnemyProjectile : MonoBehaviour {
 
     private Rigidbody2D rb;
-    private Vector3 shootDirection;
+    private Vector3 shootDirection, v, pointDirection;
     private float shootSpeed = 1f;
     private float shootDamage = 5f;
+	public int shootType = 0;
     private Transform playerTransform;
 
     // Use this for initialization
@@ -14,9 +15,37 @@ public class EnemyProjectile : MonoBehaviour {
     {
         rb = GetComponent<Rigidbody2D>();
 
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-        shootDirection = playerTransform.position;
-        shootDirection = Vector3.Normalize(shootDirection - transform.position);
+        //playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        
+		if(shootType == 0){
+			shootDirection = Vector3.Normalize(GameObject.FindGameObjectWithTag("Player").transform.position - transform.position);
+		}
+		if (shootType == 1) {
+
+			pointDirection = transform.position + Vector3.up*10;
+			shootDirection = Vector3.Normalize(pointDirection - transform.position);
+		}
+
+		if (shootType == 2 ) {
+
+			pointDirection = transform.position + Vector3.right*10;
+			shootDirection = Vector3.Normalize(pointDirection - transform.position);
+		}
+
+		if (shootType == 3) {
+
+			pointDirection = transform.position + Vector3.down*10;
+			shootDirection = Vector3.Normalize(pointDirection - transform.position);
+		}
+
+		if (shootType == 4) {
+
+			pointDirection = transform.position + Vector3.left*10;
+			shootDirection = Vector3.Normalize(pointDirection - transform.position);
+		}
+
+
+
 
         rb.AddForce(shootDirection * 1000 * shootSpeed);
     }
@@ -46,4 +75,9 @@ public class EnemyProjectile : MonoBehaviour {
     {
         shootSpeed = speed;
     }
+	public void setAttackDirection(int type){
+		
+		shootType = type;
+	}
 }
+
