@@ -38,6 +38,9 @@ public class GameManager : MonoBehaviour {
     public Texture2D newCursor;
     private GameObject WallFloors;
 
+	public GameObject floor;
+	public Sprite newFloor;
+
 	public AudioSource audioSource;
 
 
@@ -133,9 +136,12 @@ public class GameManager : MonoBehaviour {
 
     IEnumerator delayNextWave(float inXSeconds)
     {
-		
-        yield return new WaitForSeconds(inXSeconds);
-        m_WaveNumber++;
+		m_WaveNumber++;
+		if (m_WaveNumber == 10) {
+			floor.GetComponent<SpriteRenderer> ().sprite = newFloor;
+		}   
+		yield return new WaitForSeconds(inXSeconds);
+        
 		if (m_WaveNumber % 2 == 0) {
 			GetComponent<TrapsSpawner>().spawnTramp();
 		}
