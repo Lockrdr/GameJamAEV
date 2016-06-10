@@ -19,7 +19,7 @@ public class ShootMoment : MonoBehaviour {
 		shootDirection = Vector3.Normalize(shootDirection - transform.position);
         shootDirection.z = 0.0f;
         
-        Debug.Log(shootDirection);
+        //Debug.Log(shootDirection);
 
 		rb.AddForce (shootDirection*500*shootSpeed);
 	}

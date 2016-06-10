@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.Analytics;
 
 public class PlayerCombat : MonoBehaviour {
 
@@ -103,6 +105,13 @@ public class PlayerCombat : MonoBehaviour {
                 audioSource.clip = SoundManager.getInstance().playerDeath();
                 audioSource.Play();
                 Debug.Log("Jugador revivido");
+
+                Analytics.CustomEvent("gameOver", new Dictionary<string, object>
+                {
+                    { "Wave", GameManager.getInstance().m_WaveNumber},
+                });
+
+
 
             }
             else if (m_playerHealth > GameManager.getInstance().hpToBecomeAlive)
