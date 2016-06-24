@@ -58,16 +58,19 @@ public class EnemyProjectile : MonoBehaviour {
         if (coll.gameObject.CompareTag("Player"))
         {
             coll.gameObject.GetComponent<PlayerCombat>().addLife(shootDamage);
+            Destroy(gameObject);
+
+
             //Debug.Log("Enemigo");
         }
         else if (coll.gameObject.CompareTag("Enemy"))
         {
             return;
         }
-
-
-        Destroy(gameObject);
-
+        else if (coll.gameObject.CompareTag("ShootWall"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void setDamage(float damage)
